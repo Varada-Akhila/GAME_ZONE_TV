@@ -95,7 +95,7 @@ function buildMixedQ(level) {
     }, "");
 
     let ans;
-    try { ans = eval(jsExpr); } catch { continue; }
+    try { ans = Function('"use strict"; return (' + jsExpr + ')')(); } catch { continue; }
     if (!Number.isInteger(ans) || ans <= 0 || ans > 500) continue;
 
     const expression = nums.map((n, i) => ({ num: n, sym: i === 0 ? null : ops[i-1] }));

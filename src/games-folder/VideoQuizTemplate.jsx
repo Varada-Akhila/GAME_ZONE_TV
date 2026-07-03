@@ -1,106 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
-
-/* ─────────────────────────────────────────────────────────────────────────
-   Reusable Video Quiz Template Component
-   Encapsulates layout, remote control keyboard navigation, and video/quiz logic.
-   Used to centralize duplicate code from all video-based quizzes.
-───────────────────────────────────────────────────────────────────────── */
-export default function VideoQuizTemplate({
-  videoSrc,
-  topics,
-  theme,
-  title,
-  loadingIcon = "🎮",
-  loadingText = "Preparing questions...",
-  numQuestions = 5
-}) {
-  const [page, setPage] = useState("video");
-  const [questions, setQuestions] = useState([]);
-  const [answers, setAnswers] = useState([]);
-
-  // Scoped queues to prevent question duplication across play-agains
-  const queuesRef = useRef({});
-  const lastQRef = useRef({});
-
-  const shuffle = (arr) => {
-    return [...arr].sort(() => Math.random() - 0.5);
-  };
-
-  const getQuestions = useCallback(() => {
-    return Object.keys(topics).map(key => {
-      const pool = topics[key];
-      if (!queuesRef.current[key] || queuesRef.current[key].length === 0) {
-        let shuffled = shuffle(pool);
-        if (lastQRef.current[key] && shuffled.length > 1) {
-          while (shuffled[0] === lastQRef.current[key]) {
-            shuffled = shuffle(pool);
-          }
-        }
-        queuesRef.current[key] = shuffled;
-      }
-      const q = queuesRef.current[key].shift();
-      lastQRef.current[key] = q;
-      return q;
-    });
-  }, [topics]);
-
-  const startQuiz = useCallback(() => {
-    setPage("loading");
-    setTimeout(() => {
-      setQuestions(getQuestions());
-      setPage("quiz");
-    }, 800);
-  }, [getQuestions]);
-
-  const handleFinish = useCallback((ans) => {
-    setAnswers(ans);
-    setPage("results");
-  }, []);
-
-  const handleRestart = useCallback(() => {
-    setAnswers([]);
-    setPage("loading");
-    setTimeout(() => {
-      setQuestions(getQuestions());
-      setPage("quiz");
-    }, 800);
-  }, [getQuestions]);
-
-  return (
-    <div style={{ width: "100%", height: "100%" }}>
-      {page === "video" && (
-        <VideoPage
-          videoSrc={videoSrc}
-          theme={theme}
-          title={title}
-          onDone={startQuiz}
-        />
-      )}
-      {page === "loading" && (
-        <LoadingPage
-          theme={theme}
-          loadingIcon={loadingIcon}
-          loadingText={loadingText}
-        />
-      )}
-      {page === "quiz" && questions.length > 0 && (
-        <QuizPage
-          questions={questions}
-          theme={theme}
-          onFinish={handleFinish}
-        />
-      )}
-      {page === "results" && (
-        <ResultsPage
-          answers={answers}
-          questions={questions}
-          theme={theme}
-          onRestart={handleRestart}
-        />
-      )}
-    </div>
-  );
-}
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 
 /* ── Key Hint Component ── */
 function KeyHint({ k, label, theme }) {
@@ -158,6 +56,7 @@ function VideoPage({ videoSrc, theme, title, onDone }) {
     const onEnd = () => {
       setPlaying(false);
       setWatched(true);
+      onDone(); // Automatically launch the exam when the video ends!
     };
     const onErr = () => setVidErr(true);
 
@@ -174,7 +73,7 @@ function VideoPage({ videoSrc, theme, title, onDone }) {
       video.removeEventListener("ended", onEnd);
       video.removeEventListener("error", onErr);
     };
-  }, []);
+  }, [onDone]);
 
   // Keyboard navigation for TV Remotes
   useEffect(() => {
@@ -203,7 +102,6 @@ function VideoPage({ videoSrc, theme, title, onDone }) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [playing, watched, onDone]);
 
-  // Fallback styling logic
   const bgGradient = `radial-gradient(ellipse at 0% 0%, ${theme.accent}24, transparent 45%), radial-gradient(ellipse at 100% 100%, #fde8f0, transparent 45%), #fffdf8`;
 
   return (
@@ -233,7 +131,7 @@ function VideoPage({ videoSrc, theme, title, onDone }) {
           {title}
         </h1>
         <p style={{ color: theme.muted, fontSize: "clamp(.78rem,1.1vw,1rem)", fontWeight: 600 }}>
-          Watch the educational video, then take the quiz!
+          Watch the educational video, then take the exam!
         </p>
       </div>
 
@@ -329,7 +227,7 @@ function VideoPage({ videoSrc, theme, title, onDone }) {
           boxShadow: watched ? `0 0 18px ${theme.correct}33` : "none",
           transition: "all .4s"
         }}>
-          <span>{watched ? "✅" : "🔒"}</span><span>{watched ? "Quiz Unlocked!" : "Finish to unlock"}</span>
+          <span>{watched ? "✅" : "🔒"}</span><span>{watched ? "Exam Unlocked!" : "Finish to unlock"}</span>
         </div>
       </div>
 
@@ -353,13 +251,13 @@ function VideoPage({ videoSrc, theme, title, onDone }) {
           transition: "all .22s cubic-bezier(.34,1.56,.64,1)"
         }}
       >
-        {watched ? "🚀 Start Quiz" : "⏳ Finish video first"}
+        {watched ? "📝 Open Exam Form" : "⏳ Finish video first"}
       </button>
 
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center" }}>
         <KeyHint k="⏎ OK" label="Play / Pause" theme={theme} />
         <KeyHint k="Space" label="Play / Pause" theme={theme} />
-        <KeyHint k="⏎ OK (end)" label="Start Quiz" theme={theme} />
+        <KeyHint k="⏎ OK (end)" label="Open Exam" theme={theme} />
       </div>
     </div>
   );
@@ -419,9 +317,9 @@ function LoadingPage({ theme, loadingIcon, loadingText }) {
           marginBottom: 6,
           fontFamily: "'Fredoka One',cursive"
         }}>
-          Loading Quiz{dots}
+          {loadingText}{dots}
         </div>
-        <div style={{ color: theme.muted, fontSize: "0.9rem", fontWeight: 600 }}>{loadingText}</div>
+        <div style={{ color: theme.muted, fontSize: "0.9rem", fontWeight: 600 }}>Fetching latest questions from API...</div>
       </div>
       <div style={{ display: "flex", gap: 8 }}>
         {[0, 1, 2, 3, 4].map(i => (
@@ -439,420 +337,498 @@ function LoadingPage({ theme, loadingIcon, loadingText }) {
   );
 }
 
-/* ── Interactive Quiz Screen (Page 3) ── */
-function QuizPage({ questions, theme, onFinish }) {
-  const [qIdx, setQIdx] = useState(0);
-  const [focused, setFocused] = useState(0);
-  const [selected, setSelected] = useState(null);
-  const [answers, setAnswers] = useState([]);
-  const [countdown, setCountdown] = useState(null);
+/* ── Google Forms style Exam Screen ── */
+function GoogleFormExamPage({ questions, theme, title, onRestart }) {
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+  const [focusIndex, setFocusIndex] = useState(0);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const q = questions[qIdx];
-  const answered = selected !== null;
-  const score = answers.filter(a => a.chosen === a.correct).length;
+  // Create list of focusable items for remote control
+  const focusableItems = useMemo(() => {
+    const items = [];
+    questions.forEach((q, qIdx) => {
+      q.options.forEach((opt, optIdx) => {
+        items.push({
+          type: 'option',
+          qIdx,
+          optIdx,
+          id: `q-${qIdx}-opt-${optIdx}`
+        });
+      });
+    });
+    items.push({
+      type: 'button',
+      id: 'submit-btn'
+    });
+    return items;
+  }, [questions]);
 
-  const goNext = useCallback((snap) => {
-    if (qIdx + 1 >= questions.length) {
-      onFinish(snap);
-      return;
-    }
-    setQIdx(i => i + 1);
-    setFocused(0);
-    setSelected(null);
-    setCountdown(null);
-  }, [qIdx, questions.length, onFinish]);
-
-  const pick = useCallback((i) => {
-    if (answered) return;
-    const newAnswer = {
-      chosen: i,
-      correct: q.correctIndex,
-      explanation: q.explanation,
-      options: q.options,
-      question: q.question,
-      english: q.english
-    };
-    const snap = [...answers, newAnswer];
-    setSelected(i);
-    setAnswers(snap);
-    setCountdown(5);
-
-    const t1 = setTimeout(() => setCountdown(4), 1000);
-    const t2 = setTimeout(() => setCountdown(3), 2000);
-    const t3 = setTimeout(() => setCountdown(2), 3000);
-    const t4 = setTimeout(() => setCountdown(1), 4000);
-    const t5 = setTimeout(() => goNext(snap), 5000);
-
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
-      clearTimeout(t4);
-      clearTimeout(t5);
-    };
-  }, [answered, q, answers, goNext]);
-
+  // Handle remote arrow keys / keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (!answered) {
-        if (e.key === "ArrowDown") {
-          e.preventDefault();
-          setFocused(f => Math.min(f + 1, q.options.length - 1));
-        } else if (e.key === "ArrowUp") {
-          e.preventDefault();
-          setFocused(f => Math.max(f - 1, 0));
-        } else if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          pick(focused);
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        setFocusIndex(prev => {
+          const next = Math.min(prev + 1, focusableItems.length - 1);
+          return next;
+        });
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        setFocusIndex(prev => {
+          const next = Math.max(prev - 1, 0);
+          return next;
+        });
+      } else if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        const currentItem = focusableItems[focusIndex];
+        if (currentItem.type === 'option') {
+          if (!submitted) {
+            setSelectedAnswers(prev => ({
+              ...prev,
+              [currentItem.qIdx]: currentItem.optIdx
+            }));
+            setErrorMsg("");
+          }
+        } else if (currentItem.type === 'button') {
+          if (!submitted) {
+            handleSubmit();
+          } else {
+            onRestart();
+          }
         }
       }
     };
+
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [answered, focused, pick, q]);
+  }, [focusIndex, selectedAnswers, submitted, focusableItems, onRestart]);
 
-  const getState = (i) => {
-    if (!answered) return focused === i ? "focused" : "idle";
-    if (i === q.correctIndex) return "correct";
-    if (i === selected) return "wrong";
-    return "dim";
+  // Auto-scroll focused elements into view
+  useEffect(() => {
+    const activeItem = focusableItems[focusIndex];
+    if (activeItem) {
+      const el = document.getElementById(activeItem.id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }, [focusIndex, focusableItems]);
+
+  const handleSubmit = () => {
+    const unanswered = [];
+    questions.forEach((_, idx) => {
+      if (selectedAnswers[idx] === undefined) {
+        unanswered.push(idx + 1);
+      }
+    });
+
+    if (unanswered.length > 0) {
+      setErrorMsg(`Please answer all questions before submitting. Unanswered: Question ${unanswered.join(", ")}`);
+      // Scroll to the first unanswered question
+      const firstUnansweredIdx = unanswered[0] - 1;
+      const firstOptionFocusIdx = firstUnansweredIdx * questions[0].options.length;
+      setFocusIndex(firstOptionFocusIdx);
+      return;
+    }
+
+    setSubmitted(true);
+    // Move focus to Action Button
+    setFocusIndex(focusableItems.length - 1);
   };
 
-  const isCorrect = answered && selected === q.correctIndex;
-  const lastAnswer = answers[answers.length - 1];
-  const progPct = ((qIdx + (answered ? 1 : 0)) / questions.length) * 100;
-
-  const bgGradient = `radial-gradient(ellipse at 0% 0%, ${theme.accent}1f, transparent 50%), radial-gradient(ellipse at 100% 100%, #fef3c7, transparent 50%), #f7fdf8`;
+  const score = Object.keys(selectedAnswers).filter(
+    qIdx => selectedAnswers[qIdx] === questions[qIdx].correctIndex
+  ).length;
+  const pct = Math.round((score / questions.length) * 100);
 
   return (
     <div style={{
       width: "100%",
       height: "100%",
       overflowY: "auto",
-      background: bgGradient,
+      background: "#f0f4f9",
+      fontFamily: "'Outfit', 'Nunito', sans-serif",
+      padding: "24px 16px",
       display: "flex",
       flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "clamp(14px,2.5vh,36px) clamp(14px,3vw,48px)",
-      fontFamily: "'Nunito',sans-serif"
+      alignItems: "center"
     }}>
-      <style>{`@keyframes vqSlide{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}@keyframes vqPop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}`}</style>
-
-      <div style={{ width: "100%", maxWidth: 680 }}>
+      <div style={{ width: "100%", maxWidth: "770px" }}>
+        
+        {/* Google Form Header Card */}
         <div style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          marginBottom: "clamp(10px,1.8vh,20px)",
-          flexWrap: "wrap",
-          gap: 10
+          background: "#fff",
+          borderTop: `10px solid ${theme.accent}`,
+          borderRadius: "8px",
+          padding: "22px 28px",
+          boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+          marginBottom: "16px",
+          position: "relative"
         }}>
-          <h2 style={{
-            fontFamily: "'Fredoka One',cursive",
-            margin: 0,
-            fontSize: "clamp(1.3rem,2.8vw,2rem)",
-            fontWeight: 700,
-            background: `linear-gradient(135deg, ${theme.accent}, ${theme.gold})`,
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent"
+          <h1 style={{
+            margin: "0 0 10px 0",
+            fontSize: "2rem",
+            fontWeight: "700",
+            color: "#202124"
           }}>
-            Quiz Time
-          </h2>
-          <div style={{
-            padding: "7px 18px",
-            borderRadius: 999,
-            background: "#ffffffdb",
-            border: `1px solid ${theme.border}`,
-            fontWeight: 800,
-            color: theme.gold,
-            fontSize: "clamp(.75rem,1vw,.95rem)"
-          }}>
-            ⭐ {score} / {questions.length}
-          </div>
-        </div>
+            {title} — Exam Form
+          </h1>
+          <p style={{ margin: "0 0 16px 0", color: "#5f6368", fontSize: "0.95rem", lineHeight: 1.5 }}>
+            This quiz is formatted as a Google Forms exam. All questions are required. Use Arrow Keys to navigate and Enter/Space to select options or submit.
+          </p>
+          <div style={{ color: "#d93025", fontSize: "0.85rem", fontWeight: "600" }}>* Indicates required question</div>
 
-        <div style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 10,
-          marginBottom: "clamp(10px,1.8vh,20px)"
-        }}>
-          <span style={{ color: theme.muted, fontSize: "clamp(.7rem,.9vw,.85rem)", fontWeight: 700, whiteSpace: "nowrap" }}>
-            Q {qIdx + 1}/{questions.length}
-          </span>
-          <div style={{ flex: 1, height: 7, borderRadius: 4, background: "rgba(0,0,0,.08)", overflow: "hidden" }}>
+          {submitted && (
             <div style={{
-              height: "100%",
-              width: `${progPct}%`,
-              background: `linear-gradient(90deg, ${theme.accent}, ${theme.gold})`,
-              transition: "width .5s ease",
-              borderRadius: 4
-            }} />
-          </div>
-          <span style={{ color: theme.muted, fontSize: "clamp(.7rem,.9vw,.85rem)", fontWeight: 700 }}>
-            {Math.round(progPct)}%
-          </span>
-        </div>
-
-        <div style={{
-          background: theme.card,
-          borderRadius: "clamp(14px,2vw,22px)",
-          padding: "clamp(18px,2.8vh,28px) clamp(16px,2.5vw,26px) clamp(14px,2.2vh,22px)",
-          border: `2px solid ${theme.accent}1f`,
-          boxShadow: "0 6px 32px rgba(0,0,0,.1)",
-          marginBottom: 12,
-          animation: "vqPop .3s ease"
-        }}>
-          <p style={{
-            fontSize: "clamp(.95rem,1.8vw,1.1rem)",
-            fontWeight: 800,
-            lineHeight: 1.6,
-            color: theme.text,
-            margin: "0 0 4px 0"
-          }}>{q.question}</p>
-          <p style={{
-            fontSize: "clamp(.78rem,1.3vw,.92rem)",
-            fontWeight: 600,
-            color: theme.muted,
-            margin: "0 0 clamp(14px,2vh,20px) 0",
-            fontStyle: "italic"
-          }}>{q.english}</p>
-
-          <div style={{ display: "flex", flexDirection: "column", gap: "clamp(7px,1vh,10px)" }}>
-            {q.options.map((opt, i) => {
-              const st = getState(i);
-              const isFoc = st === "focused";
-              return (
-                <button
-                  key={i}
-                  onClick={() => !answered && pick(i)}
-                  onMouseEnter={() => !answered && setFocused(i)}
-                  style={{
-                    width: "100%",
-                    padding: "clamp(10px,1.5vh,13px) clamp(12px,1.5vw,16px)",
-                    borderRadius: "clamp(10px,1.2vw,14px)",
-                    border: `1.5px solid ${st === "correct" ? theme.correct : st === "wrong" ? theme.wrong : isFoc ? theme.accent : theme.border}`,
-                    background: st === "correct" ? theme.correctBg : st === "wrong" ? theme.wrongBg : st === "dim" ? "rgba(0,0,0,.03)" : isFoc ? `${theme.accent}1a` : "rgba(255,255,255,.7)",
-                    color: st === "dim" ? "#bbb" : st === "correct" ? theme.correct : st === "wrong" ? theme.wrong : theme.text,
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "clamp(8px,1vw,12px)",
-                    fontSize: "clamp(.8rem,1.2vw,.95rem)",
-                    fontWeight: 600,
-                    fontFamily: "'Nunito',sans-serif",
-                    cursor: answered ? "default" : "pointer",
-                    textAlign: "left",
-                    outline: "none",
-                    lineHeight: 1.4,
-                    transition: "all .2s cubic-bezier(.34,1.56,.64,1)",
-                    transform: isFoc ? "translateX(6px)" : "none",
-                    boxShadow: st === "correct" ? `0 0 16px ${theme.correct}33` : st === "wrong" ? `0 0 10px ${theme.wrong}26` : isFoc ? `0 0 0 2px ${theme.accent}40` : "none",
-                    opacity: st === "dim" ? 0.4 : 1
-                  }}
-                >
-                  <span style={{
-                    minWidth: 26,
-                    height: 26,
-                    borderRadius: 7,
-                    flexShrink: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: ".76rem",
-                    fontWeight: 900,
-                    color: "#fff",
-                    background: st === "correct" ? theme.correct : st === "wrong" ? theme.wrong : isFoc ? theme.accent : "rgba(0,0,0,.15)"
-                  }}>
-                    {st === "correct" ? "✓" : st === "wrong" ? "✗" : String.fromCharCode(65 + i)}
-                  </span>
-                  {opt}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {answered && lastAnswer && (
-          <div style={{
-            padding: "clamp(10px,1.5vh,14px) clamp(14px,2vw,18px)",
-            borderRadius: "clamp(10px,1.2vw,14px)",
-            background: isCorrect ? theme.correctBg : theme.wrongBg,
-            border: `1px solid ${isCorrect ? theme.correct : theme.wrong}`,
-            display: "flex",
-            gap: 10,
-            alignItems: "center",
-            marginBottom: 12,
-            animation: "vqSlide .25s ease"
-          }}>
-            <span style={{ fontSize: "1.4rem", flexShrink: 0 }}>{isCorrect ? "🎉" : "💡"}</span>
-            <div style={{ flex: 1, fontSize: "clamp(.78rem,1.1vw,.9rem)", lineHeight: 1.55, color: theme.muted, fontWeight: 600 }}>
-              <span style={{ fontWeight: 800, color: isCorrect ? theme.correct : theme.wrong, marginRight: 6 }}>
-                {isCorrect ? "Correct!" : "Wrong!"}
-              </span>
-              {lastAnswer.explanation}
-            </div>
-            <div style={{
-              minWidth: 36,
-              height: 36,
-              borderRadius: "50%",
-              background: isCorrect ? theme.correct : theme.wrong,
+              marginTop: "20px",
+              padding: "16px 20px",
+              background: pct >= 80 ? `${theme.correct}15` : pct >= 50 ? `${theme.gold}15` : `${theme.wrong}15`,
+              borderRadius: "8px",
+              border: `1.5px solid ${pct >= 80 ? theme.correct : pct >= 50 ? theme.gold : theme.wrong}`,
               display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#fff",
-              fontWeight: 900,
-              fontSize: "1rem",
-              flexShrink: 0
+              flexDirection: "column",
+              gap: 8
             }}>
-              {countdown}
+              <div style={{ fontSize: "1.2rem", fontWeight: "800", color: pct >= 80 ? theme.correct : pct >= 50 ? theme.gold : theme.wrong }}>
+                🎉 Score Released: {score} / {questions.length} ({pct}%)
+              </div>
+              <div style={{ height: "6px", background: "rgba(0,0,0,0.06)", borderRadius: "3px", overflow: "hidden" }}>
+                <div style={{ height: "100%", width: `${pct}%`, background: pct >= 80 ? theme.correct : pct >= 50 ? theme.gold : theme.wrong, transition: "width .5s ease" }} />
+              </div>
+              <div style={{ fontSize: "0.88rem", color: "#5f6368", fontWeight: "600" }}>
+                {pct === 100 ? "Perfect score! Outstanding job!" : pct >= 80 ? "Excellent understanding!" : "Keep learning and try again."}
+              </div>
             </div>
+          )}
+        </div>
+
+        {/* Questions List */}
+        {questions.map((q, qIdx) => {
+          const selectedOpt = selectedAnswers[qIdx];
+          const isQCorrect = selectedOpt === q.correctIndex;
+          const showQFeedback = submitted;
+
+          return (
+            <div
+              key={qIdx}
+              style={{
+                background: "#fff",
+                borderRadius: "8px",
+                padding: "24px 28px",
+                boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+                marginBottom: "16px",
+                border: showQFeedback
+                  ? `1px solid ${isQCorrect ? theme.correct : theme.wrong}`
+                  : "1px solid #dadce0",
+                transition: "border-color 0.3s"
+              }}
+            >
+              {/* Question Text */}
+              <div style={{ display: "flex", gap: 6, marginBottom: "4px" }}>
+                <span style={{ fontSize: "1.05rem", fontWeight: "700", color: "#202124" }}>
+                  {qIdx + 1}. {q.question}
+                </span>
+                <span style={{ color: "#d93025", fontSize: "1rem" }}>*</span>
+              </div>
+              <p style={{ margin: "0 0 20px 0", color: "#5f6368", fontSize: "0.9rem", fontStyle: "italic" }}>
+                {q.english}
+              </p>
+
+              {/* Options */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                {q.options.map((opt, optIdx) => {
+                  const isFocused = focusableItems[focusIndex]?.id === `q-${qIdx}-opt-${optIdx}`;
+                  const isSelected = selectedAnswers[qIdx] === optIdx;
+                  const isCorrectOpt = optIdx === q.correctIndex;
+
+                  let optBg = "#fff";
+                  let optBorder = "1px solid #dadce0";
+                  let optColor = "#202124";
+                  let optOpacity = 1;
+
+                  if (isFocused) {
+                    optBorder = `1.5px solid ${theme.accent}`;
+                    optBg = `${theme.accent}0a`;
+                  } else if (isSelected) {
+                    optBorder = `1.5px solid ${theme.accent}`;
+                    optBg = `${theme.accent}14`;
+                  }
+
+                  if (showQFeedback) {
+                    if (isCorrectOpt) {
+                      optBorder = `1.5px solid ${theme.correct}`;
+                      optBg = theme.correctBg;
+                      optColor = theme.correct;
+                    } else if (isSelected) {
+                      optBorder = `1.5px solid ${theme.wrong}`;
+                      optBg = theme.wrongBg;
+                      optColor = theme.wrong;
+                    } else {
+                      optOpacity = 0.55;
+                    }
+                  }
+
+                  return (
+                    <button
+                      id={`q-${qIdx}-opt-${optIdx}`}
+                      key={optIdx}
+                      disabled={submitted}
+                      onClick={() => {
+                        setSelectedAnswers(prev => ({ ...prev, [qIdx]: optIdx }));
+                        setErrorMsg("");
+                      }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        width: "100%",
+                        padding: "12px 16px",
+                        borderRadius: "8px",
+                        border: optBorder,
+                        background: optBg,
+                        color: optColor,
+                        opacity: optOpacity,
+                        fontSize: "0.98rem",
+                        fontWeight: "600",
+                        fontFamily: "inherit",
+                        cursor: submitted ? "default" : "pointer",
+                        textAlign: "left",
+                        outline: "none",
+                        transition: "all 0.15s ease",
+                        boxShadow: isFocused ? `0 0 0 3px ${theme.accent}33` : "none"
+                      }}
+                    >
+                      {/* Radio Circle Icon or Checkmark/Cross */}
+                      {showQFeedback ? (
+                        isCorrectOpt ? (
+                          <span style={{ color: theme.correct, marginRight: "12px", fontSize: "1.2rem", fontWeight: "900" }}>✓</span>
+                        ) : isSelected ? (
+                          <span style={{ color: theme.wrong, marginRight: "12px", fontSize: "1.2rem", fontWeight: "900" }}>✗</span>
+                        ) : (
+                          <div style={{ width: "20px", height: "20px", borderRadius: "50%", border: "2px solid #ccc", marginRight: "12px", flexShrink: 0 }} />
+                        )
+                      ) : (
+                        <div style={{
+                          width: "20px",
+                          height: "20px",
+                          borderRadius: "50%",
+                          border: `2px solid ${isSelected ? theme.accent : "#dadce0"}`,
+                          display: "inline-flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          marginRight: "12px",
+                          flexShrink: 0,
+                          background: "#fff"
+                        }}>
+                          {isSelected && (
+                            <div style={{
+                              width: "10px",
+                              height: "10px",
+                              borderRadius: "50%",
+                              background: theme.accent
+                            }} />
+                          )}
+                        </div>
+                      )}
+                      <span>{opt}</span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Explanation Block (Submitted only) */}
+              {showQFeedback && (
+                <div style={{
+                  marginTop: "16px",
+                  padding: "12px 16px",
+                  background: "#f8fafc",
+                  borderRadius: "6px",
+                  borderLeft: `4px solid ${isQCorrect ? theme.correct : theme.wrong}`,
+                  fontSize: "0.88rem",
+                  color: "#5f6368",
+                  lineHeight: 1.55
+                }}>
+                  <div style={{ fontWeight: "700", color: isQCorrect ? theme.correct : theme.wrong, marginBottom: "4px" }}>
+                    {isQCorrect ? "✓ Correct Feedback" : "✗ Incorrect Feedback"}
+                  </div>
+                  {q.explanation}
+                </div>
+              )}
+            </div>
+          );
+        })}
+
+        {/* Validation Error Message */}
+        {errorMsg && (
+          <div style={{
+            background: "#fdf2f2",
+            border: "1px solid #f8b4b4",
+            color: "#9b1c1c",
+            padding: "12px 16px",
+            borderRadius: "8px",
+            marginBottom: "16px",
+            fontSize: "0.92rem",
+            fontWeight: "700",
+            textAlign: "center"
+          }}>
+            {errorMsg}
           </div>
         )}
 
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
-          <KeyHint k="↑↓" label="Navigate" theme={theme} />
-          <KeyHint k="⏎ OK" label="Select answer" theme={theme} />
-          {answered && <KeyHint k="⏳" label="Auto next in 5s" theme={theme} />}
+        {/* Submit / Action Button */}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "24px", marginBottom: "48px" }}>
+          <div>
+            <KeyHint k="↑↓" label="Navigate form" theme={theme} />
+            <KeyHint k="⏎ OK" label="Choose / Submit" theme={theme} />
+          </div>
+          <button
+            id="submit-btn"
+            onClick={submitted ? onRestart : handleSubmit}
+            style={{
+              padding: "12px 36px",
+              background: submitted ? `linear-gradient(135deg, ${theme.accent}, ${theme.gold})` : theme.accent,
+              color: "#fff",
+              border: "none",
+              borderRadius: "4px",
+              fontSize: "1.05rem",
+              fontWeight: "700",
+              cursor: "pointer",
+              fontFamily: "inherit",
+              boxShadow: focusableItems[focusIndex]?.id === 'submit-btn'
+                ? `0 0 0 4px ${theme.accent}66, 0 4px 12px rgba(0,0,0,0.15)`
+                : "0 1px 3px rgba(0,0,0,0.15)",
+              outline: "none",
+              transform: focusableItems[focusIndex]?.id === 'submit-btn' ? "scale(1.05)" : "scale(1)",
+              transition: "all 0.2s ease"
+            }}
+          >
+            {submitted ? "🔄 Play Again" : "Submit Exam"}
+          </button>
         </div>
+
       </div>
     </div>
   );
 }
 
-/* ── Summary / Scoreboard Screen (Page 4) ── */
-function ResultsPage({ answers, questions, theme, onRestart }) {
-  const [hover, setHover] = useState(false);
-  const score = answers.filter(a => a.chosen === a.correct).length;
-  const pct = Math.round((score / answers.length) * 100);
-  const emoji = pct === 100 ? "🏆" : pct >= 80 ? "🌟" : pct >= 60 ? "👏" : pct >= 40 ? "📚" : "💪";
-  const msg = pct === 100 ? "Perfect Score!" : pct >= 80 ? "Excellent!" : pct >= 60 ? "Good Job!" : pct >= 40 ? "Keep Learning!" : "Nice Try!";
-  const col = pct >= 80 ? theme.correct : pct >= 50 ? theme.gold : theme.wrong;
+/* Helper to map game title to JSON database filename key */
+const getGameFileFromTitle = (title) => {
+  const t = title.toLowerCase();
+  if (t.includes("seasons") || t.includes("రుతువుల")) return "seasons.jsx";
+  if (t.includes("solar") || t.includes("సౌర")) return "solar.jsx";
+  if (t.includes("symbols") || t.includes("national") || t.includes("watch")) return "newquizgame.jsx";
+  if (t.includes("water") || t.includes("journey") || t.includes("💧")) return "watercycle.jsx";
+  if (t.includes("disasters") || t.includes("వైపరీత్యాలు")) return "natuarl.jsx";
+  if (t.includes("animal") || t.includes("జంతువులు")) return "animal.jsx";
+  if (t.includes("body") || t.includes("health") || t.includes("🫀")) return "bodyparts.jsx";
+  if (t.includes("electric") || t.includes("tech") || t.includes("⚡")) return "electric.jsx";
+  return "seasons.jsx";
+};
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        onRestart();
+/* ── Main Template Root ── */
+export default function VideoQuizTemplate({
+  videoSrc,
+  topics,
+  theme,
+  title,
+  loadingIcon = "🎮",
+  loadingText = "Preparing exam form",
+  numQuestions = 5
+}) {
+  const [page, setPage] = useState("video");
+  const [questions, setQuestions] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  // Pick exactly 1 question per topic group
+  const selectQuestionsFromTopics = useCallback((topicsObj) => {
+    return Object.keys(topicsObj).map(key => {
+      const pool = topicsObj[key];
+      const shuffled = [...pool].sort(() => Math.random() - 0.5);
+      return shuffled[0];
+    });
+  }, []);
+
+  const selectQuestions = useCallback((questionsArray) => {
+    return [...questionsArray]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, numQuestions);
+  }, [numQuestions]);
+
+  // Load questions dynamically from API or fallbacks
+  const startQuiz = useCallback(async () => {
+    setPage("loading");
+    setLoading(true);
+    const gameFile = getGameFileFromTitle(title);
+
+    try {
+      // 1. Try production PHP endpoint
+      const response = await fetch(`/api/get_questions.php?game=${gameFile}`);
+      if (!response.ok) throw new Error("Production API endpoint not available");
+      const data = await response.json();
+      
+      if (data && Array.isArray(data.questions)) {
+        setQuestions(selectQuestions(data.questions));
+        setPage("exam");
+        setLoading(false);
+        return;
       }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onRestart]);
+    } catch (err) {
+      console.log("Production API not available, trying mock questions.json...");
+    }
 
-  const bgGradient = `radial-gradient(ellipse at 50% 0%, ${theme.accent}1f, transparent 50%), #f7fdf8`;
+    try {
+      // 2. Try the mock public JSON file
+      const response = await fetch(`/api/questions.json`);
+      if (!response.ok) throw new Error("Mock questions database not available");
+      const data = await response.json();
+      
+      const gameTopics = data[gameFile];
+      if (gameTopics) {
+        setQuestions(selectQuestionsFromTopics(gameTopics));
+        setPage("exam");
+        setLoading(false);
+        return;
+      }
+    } catch (err) {
+      console.warn("Mock API database load failed, falling back to local questions:", err);
+    }
+
+    // 3. Fallback to local topics passed via props
+    const localQ = selectQuestionsFromTopics(topics);
+    setQuestions(localQ);
+    setPage("exam");
+    setLoading(false);
+  }, [title, topics, selectQuestionsFromTopics, selectQuestions]);
+
+  const handleRestart = useCallback(() => {
+    setPage("video");
+  }, []);
 
   return (
-    <div style={{
-      width: "100%",
-      height: "100%",
-      overflowY: "auto",
-      background: bgGradient,
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "clamp(20px,3vh,48px) clamp(16px,3vw,48px)",
-      fontFamily: "'Nunito',sans-serif",
-      gap: "clamp(14px,2vh,22px)"
-    }}>
-      <style>{`@keyframes vqBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}`}</style>
-
-      <div style={{
-        fontSize: "clamp(3.5rem,8vw,5.5rem)",
-        filter: `drop-shadow(0 0 20px ${col})`,
-        animation: "vqBounce 2s ease-in-out infinite"
-      }}>{emoji}</div>
-
-      <h2 style={{
-        fontFamily: "'Fredoka One',cursive",
-        margin: 0,
-        fontSize: "clamp(1.8rem,4vw,2.8rem)",
-        fontWeight: 700,
-        background: `linear-gradient(135deg, ${theme.accent}, ${theme.gold})`,
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent"
-      }}>{msg}</h2>
-
-      <div style={{
-        display: "inline-flex",
-        alignItems: "baseline",
-        gap: 8,
-        padding: "clamp(12px,2vh,18px) clamp(28px,4vw,48px)",
-        borderRadius: 20,
-        background: theme.card,
-        border: `2.5px solid ${col}44`,
-        boxShadow: `0 0 32px ${col}18,0 6px 24px rgba(0,0,0,.08)`
-      }}>
-        <span style={{ fontSize: "clamp(2.5rem,7vw,4rem)", fontWeight: 900, color: col }}>{score}</span>
-        <span style={{ fontSize: "clamp(1.3rem,3vw,2rem)", color: theme.muted }}>/ {answers.length}</span>
-        <span style={{ fontSize: "clamp(.88rem,1.2vw,1rem)", color: theme.muted, marginLeft: 4 }}>({pct}%)</span>
-      </div>
-
-      <div style={{
-        width: "100%",
-        maxWidth: 600,
-        display: "flex",
-        flexDirection: "column",
-        gap: 8,
-        maxHeight: "30vh",
-        overflowY: "auto",
-        paddingRight: 4
-      }}>
-        {answers.map((a, i) => {
-          const ok = a.chosen === a.correct;
-          return (
-            <div
-              key={i}
-              style={{
-                padding: "clamp(9px,1.3vh,13px) clamp(13px,1.8vw,16px)",
-                borderRadius: "clamp(10px,1.2vw,14px)",
-                background: ok ? theme.correctBg : theme.wrongBg,
-                border: `1px solid ${ok ? `${theme.correct}44` : `${theme.wrong}44`}`,
-                display: "flex",
-                gap: 10,
-                alignItems: "flex-start"
-              }}
-            >
-              <span style={{ flexShrink: 0, marginTop: 1 }}>{ok ? "✅" : "❌"}</span>
-              <div style={{ fontSize: "clamp(.76rem,1vw,.88rem)", lineHeight: 1.5 }}>
-                <div style={{ fontWeight: 700, color: theme.text, marginBottom: ok ? 0 : 3 }}>
-                  {questions[i]?.english}
-                </div>
-                {!ok && (
-                  <div style={{ color: theme.muted, fontWeight: 600 }}>
-                    Your answer: <span style={{ color: theme.wrong, fontWeight: 800 }}>{questions[i]?.options[a.chosen]}</span>
-                    {" · "}Correct: <span style={{ color: theme.correct, fontWeight: 800 }}>{questions[i]?.options[a.correct]}</span>
-                  </div>
-                )}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      <button
-        onClick={onRestart}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        style={{
-          padding: "clamp(12px,1.8vh,18px) clamp(40px,6vw,72px)",
-          borderRadius: 999,
-          border: "none",
-          cursor: "pointer",
-          background: `linear-gradient(135deg, ${theme.accent}, ${theme.gold})`,
-          color: "#fff",
-          fontWeight: 800,
-          fontFamily: "'Nunito',sans-serif",
-          fontSize: "clamp(.9rem,1.4vw,1.15rem)",
-          boxShadow: hover ? `0 0 0 4px ${theme.accent}4d,0 10px 36px ${theme.accent}80` : `0 6px 28px ${theme.accent}66`,
-          transform: hover ? "scale(1.07) translateY(-2px)" : "scale(1)",
-          transition: "all .22s cubic-bezier(.34,1.56,.64,1)",
-          outline: "none"
-        }}
-      >
-        🔄 Play Again
-      </button>
+    <div style={{ width: "100%", height: "100%" }}>
+      {page === "video" && (
+        <VideoPage
+          videoSrc={videoSrc}
+          theme={theme}
+          title={title}
+          onDone={startQuiz}
+        />
+      )}
+      {page === "loading" && (
+        <LoadingPage
+          theme={theme}
+          loadingIcon={loadingIcon}
+          loadingText={loadingText}
+        />
+      )}
+      {page === "exam" && questions.length > 0 && (
+        <GoogleFormExamPage
+          questions={questions}
+          theme={theme}
+          title={title}
+          onRestart={handleRestart}
+        />
+      )}
     </div>
   );
 }

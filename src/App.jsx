@@ -172,7 +172,14 @@ function CategoryPage({ categoryId, highlightId, onBack, onPlayGame }) {
   const [idx, setIdx] = useState(() => Math.max(0, games.findIndex(g => g.id === highlightId)));
   
   const gridRef = useRef(null);
-  const COLS = 4;
+
+  const getCols = () => {
+    const w = window.innerWidth;
+    if (w > 1024) return 4;
+    if (w > 768) return 3;
+    if (w > 480) return 2;
+    return 1;
+  };
 
   useEffect(() => {
     if (gridRef.current && gridRef.current.children[idx]) {
@@ -185,6 +192,7 @@ function CategoryPage({ categoryId, highlightId, onBack, onPlayGame }) {
 
   useEffect(() => {
     const h = (e) => {
+      const COLS = getCols();
       const rows = Math.ceil(games.length / COLS);
       const row = Math.floor(idx / COLS);
       const col = idx % COLS;
@@ -326,7 +334,19 @@ function GamePage({ gameId, onBack }) {
   if (!game || !GameComponent) return null;
 
   return (
-    <div className="tv-play-page">
+    <div className="tv-play-page" style={{ position: 'relative' }}>
+      <button 
+        className="mobile-exit-btn" 
+        onClick={() => {
+          setShowBackOverlay(true);
+          setOverlayBtn(0);
+        }}
+        title="Exit Game"
+        aria-label="Exit Game"
+      >
+        ←
+      </button>
+
       <div className="tv-play-frame">
         <React.Suspense fallback={
           <div style={{ display: 'flex', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center', background: '#000', color: '#fff', fontSize: '1.5rem', fontFamily: "'Fredoka One', cursive" }}>

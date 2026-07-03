@@ -794,3 +794,556 @@ button { font-family: inherit; cursor: pointer; border: none; outline: none; }
   font-weight: 700;
   margin-top: 4px;
 }
+
+/* ════════════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS AND RESOLUTION ALIGNMENT
+════════════════════════════════════════════════════════════════════ */
+.mobile-exit-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 0;
+  line-height: 1;
+}
+
+.mobile-exit-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.mobile-exit-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 1024px) {
+  .tv-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tv-cat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tv-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .tv-cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .tv-header {
+    padding: 12px 16px;
+  }
+  .tv-grid-wrapper, .tv-cat-grid-wrapper {
+    padding: 12px 16px;
+  }
+
+  /* --- Global Overrides for Legacy Inline-Styled TV Quizzes --- */
+  .tv-play-frame video {
+    max-height: 50vh !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+  }
+
+  .tv-play-frame h1 {
+    font-size: clamp(1.4rem, 5.5vw, 2rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .tv-play-frame h2 {
+    font-size: clamp(1.1rem, 4.5vw, 1.45rem) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .tv-play-frame h3 {
+    font-size: clamp(0.95rem, 4vw, 1.2rem) !important;
+    line-height: 1.3 !important;
+  }
+
+  .tv-play-frame p {
+    font-size: clamp(0.85rem, 3.5vw, 0.98rem) !important;
+    line-height: 1.55 !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Target main cards/boxes (width 1500px, 1200px, 1000px, 950px, 900px, 800px, etc.) */
+  .tv-play-frame div[style*="width:"][style*="max-width:"],
+  .tv-play-frame div[style*="width: 1500px"],
+  .tv-play-frame div[style*="width:1500px"],
+  .tv-play-frame div[style*="width: 1200px"],
+  .tv-play-frame div[style*="width:1200px"],
+  .tv-play-frame div[style*="width: 1000px"],
+  .tv-play-frame div[style*="width:1000px"],
+  .tv-play-frame div[style*="width: 950px"],
+  .tv-play-frame div[style*="width:950px"],
+  .tv-play-frame div[style*="width: 900px"],
+  .tv-play-frame div[style*="width:900px"],
+  .tv-play-frame div[style*="width: 800px"],
+  .tv-play-frame div[style*="width:800px"] {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+
+  /* General containers that wrap layouts in legacy quizzes */
+  .tv-play-frame div[style*="padding:"][style*="min-height:"] {
+    padding: 16px !important;
+  }
+
+  /* Target legacy buttons and selection tiles (padding 24px 60px, etc.) */
+  .tv-play-frame div[onClick][style*="padding:"] {
+    padding: 12px 24px !important;
+    font-size: clamp(0.92rem, 3.8vw, 1.15rem) !important;
+    border-radius: 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Fix absolute Skip Video buttons to center and display nicely below player */
+  .tv-play-frame div[style*="position: absolute"][style*="top:"],
+  .tv-play-frame div[style*="position:absolute"][style*="top:"] {
+    position: relative !important;
+    top: 0 !important;
+    right: 0 !important;
+    margin: 12px auto !important;
+    display: inline-block !important;
+    font-size: 0.9rem !important;
+    padding: 8px 18px !important;
+    border-radius: 8px !important;
+  }
+
+  /* Scale down results trophy/medal icons */
+  .tv-play-frame div[style*="font-size: 90px"],
+  .tv-play-frame div[style*="font-size:90px"],
+  .tv-play-frame div[style*="font-size: 80px"],
+  .tv-play-frame div[style*="font-size:80px"] {
+    font-size: 3rem !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tv-grid {
+    grid-template-columns: 1fr;
+  }
+  .tv-cat-grid {
+    grid-template-columns: 1fr;
+  }
+  .tv-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .mobile-exit-btn {
+    top: 10px;
+    left: 10px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   ALGEBRA QUEST (EQUATIONAL WORK) RESPONSIVE OVERRIDES
+════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Root layout overrides */
+  .algebra-quest-root div[style*="height: 100vh"],
+  .algebra-quest-root div[style*="height:100vh"] {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    padding: 16px 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
+  }
+
+  /* TV Container overrides */
+  .algebra-quest-root div[style*="width: 85vw"],
+  .algebra-quest-root div[style*="width:85vw"] {
+    width: 95vw !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 40px auto 10px !important;
+  }
+
+  /* Back Button */
+  .algebra-quest-root button[style*="position: absolute"],
+  .algebra-quest-root button[style*="position:absolute"] {
+    position: absolute !important;
+    top: -30px !important;
+    left: 0 !important;
+    padding: 6px 14px !important;
+    font-size: 0.85rem !important;
+    border-radius: 6px !important;
+  }
+
+  /* Title headers & emojis */
+  .algebra-quest-root div[style*="font-size: 6vh"] {
+    font-size: 2.8rem !important;
+  }
+  .algebra-quest-root h1[style*="font-size: 5vh"] {
+    font-size: 1.8rem !important;
+    margin: 8px 0 !important;
+  }
+  .algebra-quest-root p[style*="font-size: 2.5vh"] {
+    font-size: 0.95rem !important;
+  }
+
+  /* Lesson list cards */
+  .algebra-quest-root div[style*="border-radius: 20px"] {
+    flex-direction: column !important;
+    padding: 12px 14px !important;
+    gap: 8px !important;
+    border-radius: 12px !important;
+  }
+  .algebra-quest-root div[style*="font-size: 5vh"][style*="border-radius: 16"] {
+    font-size: 2rem !important;
+    padding: 8px !important;
+    border-radius: 10px !important;
+  }
+  .algebra-quest-root div[style*="font-size: 3vh"][style*="font-weight: 700"] {
+    font-size: 1.15rem !important;
+  }
+  .algebra-quest-root div[style*="font-size: 2vh"][style*="color:"] {
+    font-size: 0.82rem !important;
+  }
+
+  /* Concepts row & columns */
+  .algebra-quest-root div[style*="flex-direction: row"] {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  .algebra-quest-root div[style*="width: 25%"] {
+    width: 100% !important;
+  }
+  .algebra-quest-root div[style*="flex: 1"] {
+    width: 100% !important;
+  }
+  .algebra-quest-root h2[style*="font-size: 4vh"] {
+    font-size: 1.35rem !important;
+  }
+  .algebra-quest-root h3[style*="font-size: 4vh"] {
+    font-size: 1.2rem !important;
+  }
+  .algebra-quest-root p[style*="font-size: 3vh"] {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Concepts tables & examples */
+  .algebra-quest-root table[style*="font-size: 2.5vh"] {
+    font-size: 0.82rem !important;
+  }
+  .algebra-quest-root th, .algebra-quest-root td {
+    padding: 8px !important;
+  }
+  .algebra-quest-root p[style*="font-size: 4.5vh"] {
+    font-size: 1.8rem !important;
+    margin-bottom: 12px !important;
+  }
+  .algebra-quest-root span[style*="font-size: 3vh"][style*="font-family: monospace"] {
+    font-size: 1.2rem !important;
+  }
+  .algebra-quest-root span[style*="font-size: 2.5vh"] {
+    font-size: 0.88rem !important;
+  }
+
+  /* Concept Highlight */
+  .algebra-quest-root span[style*="font-size: 3.5vh"] {
+    font-size: 1.1rem !important;
+  }
+
+  /* Start Quiz button */
+  .algebra-quest-root div[style*="font-size: 3.5vh"][style*="padding: 2.5vh"] {
+    font-size: 1.2rem !important;
+    padding: 12px !important;
+    border-radius: 12px !important;
+  }
+
+  /* Quiz Question Page */
+  .algebra-quest-root span[style*="font-size: 3vh"] {
+    font-size: 0.95rem !important;
+  }
+  .algebra-quest-root p[style*="font-size: 5vh"] {
+    font-size: 2rem !important;
+    margin: 8px 0 16px 0 !important;
+  }
+  .algebra-quest-root span[style*="font-size: 4vh"] {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Input box */
+  .algebra-quest-root div[style*="width: 15vw"] {
+    width: 110px !important;
+    height: 40px !important;
+    font-size: 1.5rem !important;
+    padding: 6px 12px !important;
+  }
+
+  /* Numeric D-pad */
+  .algebra-quest-root div[style*="grid-template-columns"] {
+    gap: 6px !important;
+  }
+  .algebra-quest-root button[style*="padding: 1.5vh 0"] {
+    padding: 8px 0 !important;
+    font-size: 1.2rem !important;
+  }
+
+  /* Result overlay & answer card */
+  .algebra-quest-root div[style*="border: 2px solid"][style*="border-radius: 24"] {
+    padding: 14px 10px !important;
+    border-radius: 16px !important;
+  }
+  .algebra-quest-root p[style*="font-size: 3vh"][style*="font-weight: bold"] {
+    font-size: 1rem !important;
+  }
+  .algebra-quest-root p[style*="font-size: 2.5vh"][style*="font-weight: bold"] {
+    font-size: 0.9rem !important;
+  }
+  .algebra-quest-root div[style*="font-size: 2.2vh"] {
+    font-size: 0.8rem !important;
+  }
+  .algebra-quest-root button[style*="font-size: 3vh"][style*="padding: 2.5vh"] {
+    font-size: 1.1rem !important;
+    padding: 12px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Final Score screen */
+  .algebra-quest-root h1[style*="font-size: 6vh"] {
+    font-size: 2rem !important;
+  }
+  .algebra-quest-root div[style*="font-size: 4vh"] {
+    font-size: 1.4rem !important;
+    margin-bottom: 24px !important;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   LEARNING TRIGONOMETRY (TRIGAME) RESPONSIVE OVERRIDES
+════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Root screen container */
+  .trigame-root {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    padding: 10px !important;
+    display: block !important;
+  }
+
+  /* App container panel */
+  .trigame-root > div[style*="background-color: rgb(30, 41, 59)"],
+  .trigame-root > div[style*="background-color:#1e293b"] {
+    height: auto !important;
+    min-height: 92vh !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 12px !important;
+  }
+
+  /* Tabs container */
+  .trigame-root div[style*="border-bottom: 2px solid"],
+  .trigame-root div[style*="border-bottom:2px solid"] {
+    padding: 6px !important;
+    flex-wrap: wrap !important;
+  }
+  .trigame-root div[style*="border-bottom: 2px solid"] > div,
+  .trigame-root div[style*="border-bottom:2px solid"] > div {
+    font-size: 0.88rem !important;
+    padding: 10px 4px !important;
+    margin: 4px !important;
+    flex: 1 1 30% !important;
+  }
+
+  /* Content Area container */
+  .trigame-root div[style*="padding: 1.5rem"],
+  .trigame-root div[style*="padding:1.5rem"] {
+    padding: 12px !important;
+    overflow-y: visible !important;
+  }
+
+  /* Mode layout for Learn Mode (Trig Circle) */
+  .trigame-root div[style*="flex-direction: row"],
+  .trigame-root div[style*="flex-direction:row"] {
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 16px !important;
+  }
+
+  /* Flexible SVG wrapper & sidepanel */
+  .trigame-root div[style*="background-color: rgb(15, 23, 42)"],
+  .trigame-root div[style*="background-color:#0f172a"] {
+    width: 100% !important;
+    height: 320px !important;
+    padding: 10px !important;
+  }
+  .trigame-root svg {
+    max-width: 250px !important;
+    max-height: 250px !important;
+  }
+  .trigame-root div[style*="display: grid"][style*="width: 40%"],
+  .trigame-root div[style*="display:grid"][style*="width:40%"] {
+    width: 100% !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    height: auto !important;
+  }
+
+  /* Angle controls & Indicators */
+  .trigame-root div[style*="margin-bottom: 1rem"] {
+    margin-bottom: 8px !important;
+  }
+  .trigame-root div[style*="font-size: 1.8rem"][style*="background-color: rgb(51, 65, 85)"],
+  .trigame-root div[style*="font-size:1.8rem"][style*="background-color:#334155"] {
+    font-size: 1.1rem !important;
+    padding: 6px 16px !important;
+  }
+  .trigame-root div[style*="width: 45px"] {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* Stat box labels and values */
+  .trigame-root div[style*="font-size: 1.1rem"][style*="margin-bottom: 0.25rem"],
+  .trigame-root div[style*="font-size:1.1rem"][style*="margin-bottom:0.25rem"] {
+    font-size: 0.82rem !important;
+  }
+  .trigame-root div[style*="font-size: 1.8rem"][style*="color: rgb(255, 255, 255)"],
+  .trigame-root div[style*="font-size:1.8rem"][style*="color:#ffffff"] {
+    font-size: 1.25rem !important;
+  }
+  .trigame-root div[style*="padding: 1rem"][style*="border-bottom:"] {
+    padding: 8px !important;
+  }
+
+  /* Table mode (Formula list) */
+  .trigame-root div[style*="font-size: 2rem"] {
+    font-size: 1.25rem !important;
+    margin-bottom: 12px !important;
+  }
+  .trigame-root div[style*="background-color: white"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 6px !important;
+    overflow-x: auto !important; /* Swipe to scroll table horizontally on small screens */
+    box-sizing: border-box !important;
+  }
+  .trigame-root table {
+    font-size: 0.78rem !important;
+  }
+  .trigame-root th, .trigame-root td {
+    padding: 6px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Quiz play mode */
+  .trigame-root div[style*="justify-content: space-between"][style*="max-width: 800px"] {
+    font-size: 0.95rem !important;
+    margin-bottom: 12px !important;
+  }
+  .trigame-root div[style*="background-color: rgb(59, 130, 246)"][style*="max-width: 800px"],
+  .trigame-root div[style*="background-color:#3b82f6"][style*="max-width:800px"] {
+    padding: 16px !important;
+    border-radius: 12px !important;
+    margin-bottom: 16px !important;
+  }
+  .trigame-root h3[style*="font-size: 2.2rem"] {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Options Grid */
+  .trigame-root div[style*="display: grid"][style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important; /* Stack option buttons */
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .trigame-root div[style*="padding: 1.5rem"][style*="font-size: 1.8rem"] {
+    padding: 12px 16px !important;
+    font-size: 1.1rem !important;
+    border-radius: 8px !important;
+  }
+
+  /* Feedback box */
+  .trigame-root div[style*="font-size: 2rem"][style*="font-weight: bold"][style*="text-align: center"] {
+    font-size: 1.15rem !important;
+    margin-top: 12px !important;
+  }
+
+  /* Score screen */
+  .trigame-root div[style*="font-size: 2rem"][style*="margin: 1.5rem 0"] {
+    font-size: 1.25rem !important;
+    margin: 16px 0 !important;
+  }
+  .trigame-root div[style*="font-size: 1.8rem"][style*="font-weight: bold"] {
+    font-size: 1.1rem !important;
+    padding: 12px 24px !important;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   GLOBAL GAME RESOLUTION ALIGNMENT & BOUNDARY PROTECTION (ALL GAMES)
+════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Force all game child components to respect viewport width bounds */
+  .tv-play-frame * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Override hardcoded viewport heights/widths on game roots */
+  .tv-play-frame div[style*="width: 100vw"],
+  .tv-play-frame div[style*="width:100vw"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .tv-play-frame div[style*="height: 100vh"],
+  .tv-play-frame div[style*="height:100vh"] {
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+
+  /* Fix absolute layouts to avoid overlaps and scrolling locks */
+  .tv-play-frame div[style*="position: absolute"][style*="inset: 0"],
+  .tv-play-frame div[style*="position:absolute"][style*="inset:0"] {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+  }
+
+  /* Prevent text clipping inside inline-styled boxes */
+  .tv-play-frame div[style*="font-size"],
+  .tv-play-frame span[style*="font-size"] {
+    line-height: 1.35 !important;
+  }
+}

@@ -1,0 +1,1690 @@
+{
+  "seasons.jsx": {
+    "causeOfSeasons": [
+      {
+        "question": "భూమి తన అక్షంపై ఎంత కోణంలో వంగి ఉంటుంది?",
+        "english": "At what angle is Earth tilted on its axis?",
+        "options": [
+          "23.4 డిగ్రీలు / 23.4 degrees",
+          "90 డిగ్రీలు / 90 degrees",
+          "45 డిగ్రీలు / 45 degrees",
+          "0 డిగ్రీలు / 0 degrees"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! భూమి తన అక్షానికి 23.4 డిగ్రీల కోణంలో వంగి ఉంటుంది, దీనినే అక్షాంశ వంపు అంటారు — Correct! Earth's axis is tilted at 23.4 degrees, which is called the axial tilt."
+      },
+      {
+        "question": "ఏడాది పొడవునా వాతావరణం వేడిగా, చల్లగా మారడానికి ముఖ్య కారణం ఏమిటి?",
+        "english": "What is the main reason the weather turns hot and cold through the year?",
+        "options": [
+          "భూమి సూర్యుని నుండి దూరం మారడం వల్ల మాత్రమే / Only because Earth's distance from the Sun changes",
+          "భూమి యొక్క అక్షాంశ వంపు, సూర్యుని చుట్టూ తిరగడం వలన / Because of Earth's axial tilt and its revolution around the Sun",
+          "చంద్రుని ప్రభావం వల్ల / Because of the Moon's influence",
+          "సముద్రాల ప్రభావం వల్ల మాత్రమే / Only because of the oceans"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! వంగి ఉన్న భూమి సూర్యుని చుట్టూ తిరుగుతున్నప్పుడు వేర్వేరు భాగలు ఎక్కువ లేదా తక్కువ సూర్యకాంతిని పొందటం వలన రుతువులు వస్తాయి — Correct! Because Earth is tilted while it revolves around the Sun, different parts get more or less sunlight, creating the seasons."
+      },
+      {
+        "question": "భూమి సూర్యుని చుట్టూ ఒక చుట్టు తిరగడానికి (పరిభ్రమణానికి) ఎంత సమయం పడుతుంది?",
+        "english": "How long does Earth take to complete one revolution around the Sun?",
+        "options": [
+          "24 గంటలు / 24 hours",
+          "30 రోజులు / 30 days",
+          "365.25 రోజులు / 365.25 days",
+          "7 రోజులు / 7 days"
+        ],
+        "correctIndex": 2,
+        "explanation": "సరైనది! భూమి సూర్యుని చుట్టూ తిరగడానికి 365.25 రోజులు పడుతుంది, అందుకే ప్రతి నాలుగు సంవత్సరాలకు ఒకసారి ఫిబ్రవరి 29 (లీప్ ఇయర్) వస్తుంది — Correct! Earth takes 365.25 days to revolve around the Sun, which is why we get an extra day, February 29, every four years (a leap year)."
+      }
+    ],
+    "equinox": [
+      {
+        "question": "విషువత్తు (ఈక్వినాక్స్) రోజున ఏమి జరుగుతుంది?",
+        "english": "What happens on an equinox day?",
+        "options": [
+          "రాత్రి పగటి కంటే చాలా పెద్దదిగా ఉంటుంది / The night is much longer than the day",
+          "పగలు మరియు రాత్రి సమానంగా ఉంటాయి / Day and night are equal in length",
+          "సూర్యుడు అసలు కనిపించడు / The Sun does not appear at all",
+          "ఆ రోజు మంచు తప్పక куруస్తుంది / It is bound to snow that day"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! విషువత్తు రోజున సూర్యకిరణాలు భూమధ్యరేఖపై నేరుగా పడటం వలన పగలు, రాత్రి సమానంగా ఉండే అద్భుత సమయం ఇది — Correct! On an equinox, the Sun's rays fall directly on the equator, making day and night equal — a wonderful moment."
+      },
+      {
+        "question": "విషువత్తు సమయంలో సూర్యకిరణాలు భూమి మీద నేరుగా ఎక్కడ పడతాయి?",
+        "english": "During an equinox, where do the Sun's rays fall directly on Earth?",
+        "options": [
+          "ఉత్తర ధ్రువం మీద / On the North Pole",
+          "దక్షిణ ధ్రువం మీద / On the South Pole",
+          "భూమధ్యరేఖ మీద / On the equator",
+          "హిమాలయాల మీద మాత్రమే / Only on the Himalayas"
+        ],
+        "correctIndex": 2,
+        "explanation": "సరైనది! విషువత్తు సమయంలో సూర్యకిరణాలు భూమధ్యరేఖపై నేరుగా పడతాయి — Correct! During an equinox, the Sun's rays fall directly on the equator."
+      },
+      {
+        "question": "కింది వాటిలో విషువత్తు (ఈక్వినాక్స్) జరిగే నెల ఏది?",
+        "english": "Which of these is a month when an equinox occurs?",
+        "options": [
+          "జనవరి / January",
+          "మార్చి / March",
+          "మే / May",
+          "ఆగస్టు / August"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మార్చి 21న ఒక విషువత్తు జరుగుతుంది, అప్పుడు పగలు రాత్రి దాదాపు సమానంగా ఉంటాయి — Correct! An equinox occurs around March 21, when day and night are nearly equal."
+      }
+    ],
+    "seasonCharacteristics": [
+      {
+        "question": "వసంతకాలం (స్ప్రింగ్) యొక్క ముఖ్య లక్షణం ఏమిటి?",
+        "english": "What is the main feature of Spring?",
+        "options": [
+          "రంగురంగుల పూలు వికసించడం, ముద్దులొలికే పసి జంతువులు పుట్టడం / Colorful flowers bloom and cute baby animals are born",
+          "విపరీతమైన మంచు కురవడం / Heavy snow falls everywhere",
+          "చెట్ల ఆకులన్నీ రాలిపోవడం / All the leaves fall from the trees",
+          "విపరీతమైన ఎండ వేడిమి / Extreme blazing heat"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! వసంతకాలంలో రంగురంగుల పూలు వికసిస్తాయి, పసి జంతువులు పుట్టి కొత్త ప్రపంచాన్ని అన్వేషిస్తాయి — Correct! In spring, colorful flowers bloom and baby animals are born to explore their new world."
+      },
+      {
+        "question": "వేసవికాలం (సమ్మర్) యొక్క ముఖ్య లక్షణం ఏది?",
+        "english": "What characterizes Summer?",
+        "options": [
+          "వేడిగా, ప్రకాశవంతమైన ఎండలు ఉండే కాలం / A hot season full of bright, sunny days",
+          "విపరీతమైన చలి, మంచుతో నిండిన కాలం / An extremely cold, snow-filled season",
+          "ఆకులు రాలిపోయే కాలం / The season when leaves fall",
+          "పగలు, రాత్రి సరిగ్గా సమానంగా ఉండే కాలం / The season when day and night are exactly equal"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! వేసవికాలం వేడిగా ఉండే ప్రకాశవంతమైన ఎండల కాలం — Correct! Summer is a hot season filled with bright, sunny days."
+      },
+      {
+        "question": "శరద్రుతువు (ఆటమ్)లో సాధారణంగా ఏమి జరుగుతుంది?",
+        "english": "What typically happens during Autumn?",
+        "options": [
+          "పూలు మొదటిసారి వికసించడం మొదలవుతాయి / Flowers begin blooming for the first time",
+          "చలిగాలులు వీస్తూ చెట్ల ఆకులు రాలిపోతాయి / Cold winds blow and leaves fall from the trees",
+          "సముద్రాలు పూర్తిగా ఎండిపోతాయి / Oceans dry up completely",
+          "ప్రతిరోజూ పగలు పొడవైనదిగా మారుతుంది / Every day becomes the longest day"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! శరద్రుతువులో చల్లని వాతావరణం వచ్చి, చెట్ల నుండి ఆకులు రాలిపోతాయి — Correct! In autumn, the weather turns cool and leaves fall from the trees."
+      }
+    ],
+    "seasonsInIndia": [
+      {
+        "question": "భారతదేశంలో మకర సంక్రాంతి పండుగ ఏ రుతువులో జరుగుతుంది?",
+        "english": "In India, during which season is the Makara Sankranti festival celebrated?",
+        "options": [
+          "శీతాకాలం / Winter",
+          "వేసవికాలం / Summer",
+          "వర్షాకాలం / Rainy season",
+          "శరద్రుతువు / Autumn"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! శీతాకాలంలో చల్లని ఉదయాలతో పాటు మకర సంక్రాంతి పండుగ వస్తుంది — Correct! Winter brings cold mornings along with the festival of Makara Sankranti."
+      },
+      {
+        "question": "మన దేశంలో సాధారణంగా నైరుతి రుతుపవనాల వల్ల వర్షాలు కురిసే కాలం ఏది?",
+        "english": "In India, which season typically brings rain due to Southwest Monsoon?",
+        "options": [
+          "శీతాకాలం / Winter",
+          "వేసవికాలం / Summer",
+          "వర్షాకాలం (మాన్సూన్) / Monsoon (Rainy Season)",
+          "వసంతకాలం / Spring"
+        ],
+        "correctIndex": 2,
+        "explanation": "సరైనది! భారతదేశంలో జూన్ నుండి సెప్టెంబర్ వరకు వర్షాకాలం ఉంటుంది, దీనినే మాన్సూన్ అంటారు — Correct! Monsoon brings heavy rain to India, lasting from June to September."
+      },
+      {
+        "question": "శీతాకాలంలో లడఖ్ లేదా హిమాలయాల్లో వాతావరణం ఎలా ఉంటుంది?",
+        "english": "What is the weather like in Ladakh or Himalayas during winter?",
+        "options": [
+          "విపరీతమైన వేడి / Blazing hot",
+          "చాలా చల్లగా మరియు మంచు కురుస్తుంది / Extremely cold and snowy",
+          "ధూళి తుఫాను వస్తుంది / Dust storm comes",
+          "సముద్రపు గాలులు వీస్తాయి / Sea breeze blows"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! హిమాలయ ప్రాంతాలలో శీతాకాలం చాలా చల్లగా, మంచుతో కప్పబడి ఉంటుంది — Correct! Winters in the Himalayas are freezing cold and covered in thick snow."
+      }
+    ],
+    "wildlifeBehavior": [
+      {
+        "question": "శీతాకాలంలో పక్షులు వెచ్చని ప్రాంతాలకు వలస వెళ్ళడాన్ని ఏమంటారు?",
+        "english": "What is it called when birds fly to warmer places during winter?",
+        "options": [
+          "వలసపోవడం (మైగ్రేషన్) / Migration",
+          "ఈత కొట్టడం / Swimming",
+          "హైబర్నేషన్ / Hibernation",
+          "ఆటలు ఆడటం / Playing"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! శీతాకాలంలో ఆహారం, వెచ్చదనం కోసం పక్షులు వేలాది కిలోమీటర్లు ప్రయాణించడాన్ని వలసపోవడం (మైగ్రేషన్) అంటారు — Correct! When birds travel long distances in winter for food and warmth, it's called migration."
+      },
+      {
+        "question": "చెట్లు ఏ రుతువులో తమ ఆకులను రాల్చి చలికాలానికి సిద్ధమవుతాయి?",
+        "english": "During which season do trees drop their leaves to prepare for winter?",
+        "options": [
+          "వసంతకాలం / Spring",
+          "వేసవికాలం / Summer",
+          "శరద్రుతువు (ఆటమ్) / Autumn",
+          "వర్షాకాలం / Monsoon"
+        ],
+        "correctIndex": 2,
+        "explanation": "సరైనది! శరద్రుతువులో ఆకులు రాల్చడం ద్వారా చెట్లు నీటిని ఆదా చేసుకుని చలికాలాన్ని తట్టుకుంటాయి — Correct! In autumn, trees drop leaves to save water and energy for the upcoming cold."
+      },
+      {
+        "question": "శీతాకాలంలో కొన్ని జంతువులు గుహల్లోకి వెళ్లి గాఢ నిద్రపోవడాన్ని ఏమంటారు?",
+        "english": "What do some animals do inside caves during winter?",
+        "options": [
+          "గాఢ నిద్రపోతాయి, దీనిని హైబర్నేషన్ అంటారు / They go into a deep sleep called hibernation",
+          "ఎండలో బయట ఆడుకుంటాయి / They play outside in the hot sun",
+          "విమానంలో ఎగురుతూ ఉంటాయి / They keep flying around in an airplane",
+          "check నాటుతూ ఉంటాయి / They spend their time planting trees"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! చలి, మంచుతో నిండిన శీతాకాలంలో కొన్ని జంతువులు గుహల్లో గాఢ నిద్రపోతాయి, దీనినే హైబర్నేషన్ అంటారు — Correct! During the cold, snowy winter, some animals go into a deep sleep in their caves, called hibernation."
+      }
+    ]
+  },
+  "solar.jsx": {
+    "sun": [
+      {
+        "question": "సౌర వ్యవస్థ మధ్యలో ఏది ఉంటుంది?",
+        "english": "What is at the center of the Solar System?",
+        "options": [
+          "భూమి / Earth",
+          "సూర్యుడు / Sun",
+          "చంద్రుడు / Moon",
+          "అంగారకుడు / Mars"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! సూర్యుడు సౌర వ్యవస్థ మధ్యలో ఉంటాడు, అన్ని గ్రహాలు దాని చుట్టూ తిరుగుతాయి — Correct! The Sun sits at the center, and every planet orbits around it."
+      },
+      {
+        "question": "సూర్యుడు అసలు ఏమిటి?",
+        "english": "What is the Sun, really?",
+        "options": [
+          "ఒక గ్రహం / A planet",
+          "ఒక నక్షత్రం / A star",
+          "ఒక ఉపగ్రహం / A moon",
+          "ఒక తోకచుక్క / A comet"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! సూర్యుడు వేడి గ్యాస్‌తో మండుతున్న నక్షత్రం — Correct! The Sun is a star made of hot, glowing gas."
+      },
+      {
+        "question": "సూర్యుడు వేడితో పాటు భూమికి ఇంకా ఏమి ఇస్తాడు?",
+        "english": "Along with heat, what else does the Sun give Earth?",
+        "options": [
+          "నీరు / Water",
+          "వెలుతురు / Light",
+          "శబ్దం / Sound",
+          "మంచు / Snow"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! సూర్యుడి వెలుతురు, వేడి భూమిపై జీవానికి అవసరం — Correct! Sunlight and heat are essential for life on Earth."
+      }
+    ],
+    "mercury": [
+      {
+        "question": "సూర్యుడికి అత్యంత దగ్గరగా ఉన్న గ్రహం ఏది?",
+        "english": "Which planet is closest to the Sun?",
+        "options": [
+          "శుక్రుడు / Venus",
+          "బుధుడు / Mercury",
+          "భూమి / Earth",
+          "అంగారకుడు / Mars"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! బుధుడు సూర్యుడికి అత్యంత దగ్గరగా ఉన్న గ్రహం — Correct! Mercury is the closest planet to the Sun."
+      },
+      {
+        "question": "పరిమాణంలో బుధుడు ఎలా ఉంటుంది?",
+        "english": "How does Mercury compare in size to other planets?",
+        "options": [
+          "అతిపెద్దది / The largest",
+          "అతిచిన్నది / The smallest",
+          "భూమి అంత పెద్దది / Same size as Earth",
+          "రెండవ అతిపెద్దది / Second largest"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! బుధుడు సౌర వ్యవస్థలో అతిచిన్న గ్రహం — Correct! Mercury is the smallest planet in the solar system."
+      },
+      {
+        "question": "బుధుడిపై వాతావరణం (గాలి పొర) ఎలా ఉంటుంది?",
+        "english": "What is Mercury's atmosphere like?",
+        "options": [
+          "చాలా దట్టంగా / Very thick",
+          "దాదాపు లేదు / Almost none",
+          "మేఘాలతో నిండి / Full of clouds",
+          "నీటి ఆవిరితో / Made of water vapor"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! బుధుడికి వాతావరణం దాదాపు లేదు, అందుకే ఉష్ణోగ్రతలు తీవ్రంగా మారుతాయి — Correct! Mercury has almost no atmosphere, so its temperature swings wildly."
+      }
+    ],
+    "venus": [
+      {
+        "question": "సౌర వ్యవస్థలో అత్యంత వేడిగా ఉండే గ్రహం ఏది?",
+        "english": "Which is the hottest planet in the solar system?",
+        "options": [
+          "బుధుడు / Mercury",
+          "శుక్రుడు / Venus",
+          "అంగారకుడు / Mars",
+          "బృహస్పతి / Jupiter"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! శుక్రుడి దట్టమైన వాతావరణం వేడిని బంధించి దానిని అత్యంత వేడి గ్రహంగా చేస్తుంది — Correct! Venus's thick atmosphere traps heat, making it the hottest planet, even hotter than Mercury."
+      },
+      {
+        "question": "పరిమాణంలో పోలిక వల్ల శుక్రుడిని ఏమని పిలుస్తారు?",
+        "english": "Because of its similar size, Venus is often called Earth's what?",
+        "options": [
+          "సోదరి గ్రహం / Sister planet",
+          "శత్రు గ్రహం / Enemy planet",
+          "ఉపగ్రహం / Moon",
+          "నీడ గ్రహం / Shadow planet"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! శుక్రుడు పరిమాణంలో భూమిని పోలి ఉండటం వల్ల దానిని 'సోదరి గ్రహం' అని పిలుస్తారు — Correct! Venus is similar in size to Earth, so it's nicknamed Earth's 'sister planet.'"
+      },
+      {
+        "question": "శుక్రుడి తిరుగుడులో విచిత్రమైనది ఏమిటి?",
+        "english": "What's unusual about how Venus spins?",
+        "options": [
+          "వ్యతిరేక దిక్కులో తిరుగుతుంది / It spins backward",
+          "అసలు తిరగదు / It doesn't spin at all",
+          "అత్యంత వేగంగా తిరుగుతుంది / It spins the fastest",
+          "దానికి అక్షమే లేదు / It has no axis"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! శుక్రుడు చాలా గ్రహాల కంటే వ్యతిరేక దిక్కులో తిరుగుతుంది — Correct! Venus rotates in the opposite direction to most other planets."
+      }
+    ],
+    "earth": [
+      {
+        "question": "మనం నివసించే గ్రహం ఏది?",
+        "english": "Which planet do we live on?",
+        "options": [
+          "అంగారకుడు / Mars",
+          "భూమి / Earth",
+          "శుక్రుడు / Venus",
+          "బృహస్పతి / Jupiter"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మనం భూమిపై నివసిస్తాము, ఇది జీవం ఉన్నట్లు తెలిసిన ఒకే ఒక గ్రహం — Correct! We live on Earth, the only known planet with life."
+      },
+      {
+        "question": "భూమిని 'నీలి గ్రహం' అని ఎందుకు పిలుస్తారు?",
+        "english": "Why is Earth called the 'Blue Planet'?",
+        "options": [
+          "నీలి రాళ్ల వల్ల / Because of blue rocks",
+          "సముద్రాలు/నీరు కప్పి ఉండటం వల్ల / Because oceans cover most of it",
+          "చల్లగా ఉండటం వల్ల / Because it's cold",
+          "నీలి ఆకాశం వల్ల మాత్రమే / Just because of the blue sky"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! భూమిలో దాదాపు 71% నీరు ఉంది, అందుకే అది అంతరిక్షం నుండి నీలంగా కనిపిస్తుంది — Correct! About 71% of Earth is covered in water, making it look blue from space."
+      },
+      {
+        "question": "భూమికి ఎన్ని చంద్రులు (ఉపగ్రహాలు) ఉన్నాయి?",
+        "english": "How many moons does Earth have?",
+        "options": [
+          "ఏదీ లేదు / None",
+          "ఒకటి / One",
+          "రెండు / Two",
+          "చాలా / Many"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! భూమికి ఒక సహజ చంద్రుడు ఉన్నాడు — Correct! Earth has one natural moon."
+      }
+    ],
+    "mars": [
+      {
+        "question": "ఏ గ్రహాన్ని 'ఎరుపు గ్రహం' అని పిలుస్తారు?",
+        "english": "Which planet is called the 'Red Planet'?",
+        "options": [
+          "శుక్రుడు / Venus",
+          "అంగారకుడు / Mars",
+          "బుధుడు / Mercury",
+          "శని / Saturn"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! అంగారకుడు ఎరుపు రంగులో కనిపిస్తాడు, అందుకే దానిని ఎరుపు గ్రహం అని పిలుస్తారు — Correct! Mars looks red, so it's nicknamed the Red Planet."
+      },
+      {
+        "question": "అంగారకుడు ఎరుపు రంగులో ఎందుకు కనిపిస్తాడు?",
+        "english": "Why does Mars appear red?",
+        "options": [
+          "మట్టిలో ఐరన్ ఆక్సైడ్ (తుప్పు) వల్ల / Because of iron oxide (rust) in its soil",
+          "ఎరుపు సముద్రాల వల్ల / Because of red oceans",
+          "ఎరుపు మేఘాల వల్ల / Because of red clouds",
+          "సూర్యకాంతి ప్రతిబింబం వల్ల / Because of reflected sunlight"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! అంగారకుడి మట్టిలో ఉన్న ఐరన్ ఆక్సైడ్ (తుప్పు) దానికి ఎరుపు రంగును ఇస్తుంది — Correct! Iron oxide (rust) in Mars's soil gives it that red color."
+      },
+      {
+        "question": "శాస్త్రవేత్తలు మానవులను పంపాలని ఆలోచిస్తున్న గ్రహం ఏది?",
+        "english": "Which planet are scientists hoping to send humans to explore?",
+        "options": [
+          "బృహస్పతి / Jupiter",
+          "అంగారకుడు / Mars",
+          "నెప్ట్యూన్ / Neptune",
+          "శని / Saturn"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! అంగారకుడు భూమిని కొంత పోలి ఉండటం వల్ల భవిష్యత్ మానవ యాత్రలకు ముఖ్య లక్ష్యంగా ఉంది — Correct! Mars is a top target for future human exploration because it's somewhat similar to Earth."
+      }
+    ],
+    "jupiter": [
+      {
+        "question": "సౌర వ్యవస్థలో అతిపెద్ద గ్రహం ఏది?",
+        "english": "Which is the biggest planet in the solar system?",
+        "options": [
+          "శని / Saturn",
+          "బృహస్పతి / Jupiter",
+          "భూమి / Earth",
+          "నెప్ట్యూన్ / Neptune"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! బృహస్పతి సౌర వ్యవస్థలో అతిపెద్ద గ్రహం — Correct! Jupiter is the biggest planet in the solar system."
+      },
+      {
+        "question": "బృహస్పతిపై ఉన్న పెద్ద తుఫానును ఏమని పిలుస్తారు?",
+        "english": "What is the giant storm on Jupiter called?",
+        "options": [
+          "గ్రేట్ రెడ్ స్పాట్ / The Great Red Spot",
+          "బ్లూ ఐ / The Blue Eye",
+          "డార్క్ వోర్టెక్స్ / The Dark Vortex",
+          "వైట్ రింగ్ / The White Ring"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! గ్రేట్ రెడ్ స్పాట్ అనేది బృహస్పతిపై వందల ఏళ్లుగా కొనసాగుతున్న పెద్ద తుఫాను — Correct! The Great Red Spot is a giant storm that has been raging on Jupiter for centuries."
+      },
+      {
+        "question": "బృహస్పతికి దాదాపు ఎన్ని ఉపగ్రహాలు (చంద్రులు) ఉన్నాయి?",
+        "english": "About how many moons does Jupiter have?",
+        "options": [
+          "ఒకటి / One",
+          "నాలుగు / Four",
+          "డజన్ల కొద్దీ (80+) / Dozens (80+)",
+          "ఏదీ లేదు / None"
+        ],
+        "correctIndex": 2,
+        "explanation": "సరైనది! బృహస్పతికి 90 కంటే ఎక్కువ ఉపగ్రహాలు కనుగొనబడ్డాయి — Correct! Jupiter has more than 90 known moons."
+      }
+    ],
+    "saturn": [
+      {
+        "question": "తన చుట్టూ అందమైన వలయాలు (రింగులు) కలిగిన గ్రహం ఏది?",
+        "english": "Which planet is famous for its beautiful rings?",
+        "options": [
+          "బృహస్పతి / Jupiter",
+          "శని / Saturn",
+          "యురేనస్ / Uranus",
+          "అంగారకుడు / Mars"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! శని గ్రహం దాని విశాలమైన, అందమైన వలయాల వల్ల ప్రసిద్ధి చెందింది — Correct! Saturn is famous for its wide, beautiful rings."
+      },
+      {
+        "question": "శని వలయాలు ఎక్కువగా దేనితో తయారయ్యాయి?",
+        "english": "What are Saturn's rings mostly made of?",
+        "options": [
+          "రాయి, లోహం / Rock and metal",
+          "మంచు, రాయి కణాలు / Ice and rock particles",
+          "ద్రవ నీరు / Liquid water",
+          "గ్యాస్ మేఘాలు / Gas clouds"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! శని వలయాలు మంచు మరియు రాయి కణాలతో తయారయ్యాయి — Correct! Saturn's rings are made mostly of ice and rock particles."
+      },
+      {
+        "question": "శని ఏ రకమైన గ్రహం?",
+        "english": "What type of planet is Saturn?",
+        "options": [
+          "రాతి గ్రహం / Rocky planet",
+          "వాయు గ్రహం (గ్యాస్ జెయింట్) / Gas giant",
+          "మంచు గ్రహం / Ice planet",
+          "మరుగుజ్జు గ్రహం / Dwarf planet"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! శని ఒక వాయు గ్రహం, ఎక్కువగా హైడ్రోజన్, హీలియంతో తయారైనది — Correct! Saturn is a gas giant, made mostly of hydrogen and helium."
+      }
+    ],
+    "uranus": [
+      {
+        "question": "ఏ గ్రహం దాని పక్కకు వాలి, దొర్లుతున్నట్టు తిరుగుతుంది?",
+        "english": "Which planet rotates almost on its side, like it's tipped over?",
+        "options": [
+          "యురేనస్ / Uranus",
+          "అంగారకుడు / Mars",
+          "బుధుడు / Mercury",
+          "భూమి / Earth"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! యురేనస్ అక్షం దాదాపు 98 డిగ్రీలు వాలి ఉంటుంది, అందుకే అది పక్కకు దొర్లుతున్నట్టు తిరుగుతుంది — Correct! Uranus's axis is tilted about 98 degrees, so it rolls on its side as it spins."
+      },
+      {
+        "question": "యురేనస్ ఏ రంగులో కనిపిస్తుంది?",
+        "english": "What color does Uranus appear?",
+        "options": [
+          "ఎరుపు / Red",
+          "లేత నీలం-ఆకుపచ్చ / Pale blue-green",
+          "పసుపు / Yellow",
+          "నారింజ / Orange"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! యురేనస్ వాతావరణంలోని మిథేన్ దానికి లేత నీలం-ఆకుపచ్చ రంగును ఇస్తుంది — Correct! Methane in Uranus's atmosphere gives it a pale blue-green color."
+      },
+      {
+        "question": "యురేనస్ ఏ గ్రహాల వర్గానికి చెందినది?",
+        "english": "What category of planet is Uranus?",
+        "options": [
+          "రాతి గ్రహం / Rocky planet",
+          "మంచు జెయింట్ / Ice giant",
+          "మరుగుజ్జు గ్రహం / Dwarf planet",
+          "నక్షత్రం / A star"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! యురేనస్, నెప్ట్యూన్‌లను 'మంచు జెయింట్స్' అని పిలుస్తారు — Correct! Uranus and Neptune are known as 'ice giants.'"
+      }
+    ],
+    "neptune": [
+      {
+        "question": "సూర్యుడికి అత్యంత దూరంలో ఉన్న గ్రహం ఏది?",
+        "english": "Which planet is farthest from the Sun?",
+        "options": [
+          "యురేనస్ / Uranus",
+          "నెప్ట్యూన్ / Neptune",
+          "శని / Saturn",
+          "ప్లూటో / Pluto"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! నెప్ట్యూన్ సూర్యుడికి అత్యంత దూరంలో ఉన్న గ్రహం — Correct! Neptune is the farthest planet from the Sun."
+      },
+      {
+        "question": "నెప్ట్యూన్ ఏ రంగులో కనిపిస్తుంది?",
+        "english": "What color is Neptune?",
+        "options": [
+          "లోతైన నీలం / Deep blue",
+          "ప్రకాశవంతమైన ఎరుపు / Bright red",
+          "ఆకుపచ్చ / Green",
+          "పసుపు / Yellow"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! వాతావరణంలోని మిథేన్ వల్ల నెప్ట్యూన్ లోతైన నీలం రంగులో కనిపిస్తుంది — Correct! Methane in its atmosphere gives Neptune its deep blue color."
+      },
+      {
+        "question": "నెప్ట్యూన్‌పై గాలులు ఎలా ఉంటాయి?",
+        "english": "What are the winds like on Neptune?",
+        "options": [
+          "నెమ్మదిగా, శాంతంగా / Calm and slow",
+          "సౌర వ్యవస్థలోనే అత్యంత వేగమైనవి / The fastest in the solar system",
+          "గాలులే లేవు / No winds at all",
+          "రాత్రి మాత్రమే వీస్తాయి / Only blow at night"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! నెప్ట్యూన్‌పై గాలులు గంటకు 2000 కిమీ వేగంతో వీస్తాయి, ఇవి సౌర వ్యవస్థలోనే అత్యంత వేగమైనవి — Correct! Neptune's winds can reach 2,000 km/h, the fastest in the solar system."
+      }
+    ]
+  },
+  "newquizgame.jsx": {
+    "banyan": [
+      {
+        "question": "భారతదేశ జాతీయ వృక్షం ఏది?",
+        "english": "What is the national tree of India?",
+        "options": [
+          "మామిడి చెట్టు / Mango",
+          "వేప చెట్టు / Neem",
+          "మర్రి చెట్టు / Banyan",
+          "నేరేడు చెట్టు / Jamun"
+        ],
+        "correctIndex": 2,
+        "explanation": "Teacher said: భారతదేశ జాతీయ వృక్షం మర్రి చెట్టు — The national tree of India is the Banyan tree."
+      },
+      {
+        "question": "మర్రి చెట్టు కొమ్మల నుండి ఏమి కిందికి పెరుగుతాయి?",
+        "english": "What grows downward from the Banyan tree's branches?",
+        "options": [
+          "పూలు / Flowers",
+          "ఆకులు / Leaves",
+          "కాయలు / Fruits",
+          "వేర్లు / Roots"
+        ],
+        "correctIndex": 3,
+        "explanation": "Teacher said: దీని కొమ్మలనుండి వేర్లు కిందికి పెరుగుతాయ్ — Roots grow downward from its branches."
+      },
+      {
+        "question": "మర్రి చెట్టు గురించి టీచర్ ఏమి చెప్పింది?",
+        "english": "What did the teacher say about the Banyan tree?",
+        "options": [
+          "చిన్నగా ఉంటుంది / It is small",
+          "తొందరగా పెరుగుతుంది / It grows fast",
+          "చాలా సంవత్సరాలు జీవిస్తుంది / Lives for many years",
+          "పూలు వస్తాయి / It gives flowers"
+        ],
+        "correctIndex": 2,
+        "explanation": "Teacher said: చాలా సంవత్సరాలు జీవిస్తుంది — The Banyan tree lives for many years."
+      }
+    ],
+    "tiger": [
+      {
+        "question": "భారతదేశ జాతీయ జంతువు ఏది?",
+        "english": "What is the national animal of India?",
+        "options": [
+          "సింహం / Lion",
+          "రాయల్ బెంగాల్ పులి / Royal Bengal Tiger",
+          "ఏనుగు / Elephant",
+          "చిరుత / Cheetah"
+        ],
+        "correctIndex": 1,
+        "explanation": "Teacher said: భారతదేశ జాతీయ జంతువు రాయల్ బెంగాల్ పులి — The national animal is the Royal Bengal Tiger."
+      },
+      {
+        "question": "పులి చాలా ______ మరియు ______ అని టీచర్ చెప్పింది.",
+        "english": "The teacher said the Tiger is very ______ and ______.",
+        "options": [
+          "అందంగా మరియు పెద్దగా / Beautiful and Big",
+          "శక్తివంతంగా మరియు వేగంగా / Strong and Fast",
+          "నిద్రపోయేది మరియు శాంతంగా / Sleepy and Calm",
+          "తెలివిగా మరియు చిన్నగా / Smart and Small"
+        ],
+        "correctIndex": 1,
+        "explanation": "Teacher said: చాలా శక్తివంతమైనది మరియు వేగవంతమైనది — Very strong and very fast."
+      },
+      {
+        "question": "రాయల్ బెంగాల్ పులి గురించి టీచర్ ఏ గుణాలు చెప్పింది?",
+        "english": "What qualities did the teacher mention about the Royal Bengal Tiger?",
+        "options": [
+          "అందం మరియు తెలివి / Beauty & Intelligence",
+          "శబ్దం మరియు భయం / Sound & Fear",
+          "పరిమాణం మరియు రంగు / Size & Color",
+          "శక్తి మరియు వేగం / Strength & Speed"
+        ],
+        "correctIndex": 3,
+        "explanation": "Teacher said: చాలా శక్తివంతమైనది మరియు వేగవంతమైనది — Very strong and very fast."
+      }
+    ],
+    "mango": [
+      {
+        "question": "భారతదేశ జాతీయ పండు ఏది?",
+        "english": "What is the national fruit of India?",
+        "options": [
+          "అరటి / Banana",
+          "మామిడి / Mango",
+          "జామ / Guava",
+          "నిమ్మ / Lemon"
+        ],
+        "correctIndex": 1,
+        "explanation": "Teacher said: భారతదేశ జాతీయ ఫలం మామిడి — The national fruit of India is Mango."
+      },
+      {
+        "question": "టీచర్ మామిడిని ఏమని పిలిచింది?",
+        "english": "What did the teacher call the Mango?",
+        "options": [
+          "మధుర పండు / Sweet fruit",
+          "పసుపు పండు / Yellow fruit",
+          "పండ్ల రాజు / King of Fruits",
+          "అడవి పండు / Forest fruit"
+        ],
+        "correctIndex": 2,
+        "explanation": "Teacher said: దీనిని పండ్లరాజు అని కూడా అంటారు — It is also called the King of Fruits."
+      },
+      {
+        "question": "మామిడి పండు రుచి ఎలా ఉంటుందని టీచర్ చెప్పింది?",
+        "english": "How did the teacher describe the taste of Mango?",
+        "options": [
+          "చేదుగా / Bitter",
+          "కారంగా / Spicy",
+          "పులుపుగా / Sour",
+          "తీయగా మరియు రుచిగా / Sweet and Tasty"
+        ],
+        "correctIndex": 3,
+        "explanation": "Teacher said: పండు చాలా తీయగా మరియు రుచిగా ఉంటుంది — Very sweet and tasty."
+      }
+    ],
+    "lotus": [
+      {
+        "question": "భారతదేశ జాతీయ పుష్పం ఏది?",
+        "english": "What is the national flower of India?",
+        "options": [
+          "కమలం / Lotus",
+          "గులాబీ / Rose",
+          "మల్లె / Jasmine",
+          "చేమంతి / Chrysanthemum"
+        ],
+        "correctIndex": 0,
+        "explanation": "Teacher said: భారతదేశ జాతీయ పుష్పం కమలం — The national flower of India is Lotus."
+      },
+      {
+        "question": "కమలం దేనికి ప్రతీక అని టీచర్ చెప్పింది?",
+        "english": "What is the Lotus a symbol of, as the teacher said?",
+        "options": [
+          "శక్తి మరియు ధైర్యం / Strength & Courage",
+          "వేగం మరియు తెలివి / Speed & Intelligence",
+          "అందం మరియు పవిత్రత / Beauty and Purity",
+          "సంతోషం మరియు సంపద / Happiness & Wealth"
+        ],
+        "correctIndex": 2,
+        "explanation": "Teacher said: ఇది అందమ్ మరియు పవిత్రతకు ప్రతీక — It is a symbol of beauty and purity."
+      },
+      {
+        "question": "టీచర్ కమలం గురించి చెప్పిన మాటలు ఏవి?",
+        "english": "Which words did the teacher use to describe the Lotus?",
+        "options": [
+          "వేగంగా పెరుగుతుంది / Grows fast",
+          "అందం మరియు పవిత్రత / Beauty and Purity",
+          "అడవిలో పెరుగుతుంది / Grows in forest",
+          "ఎర్రగా ఉంటుంది / It is red"
+        ],
+        "correctIndex": 1,
+        "explanation": "Teacher said: ఇది అందమ్ మరియు పవిత్రతకు ప్రతీక — Symbol of beauty and purity."
+      }
+    ],
+    "peacock": [
+      {
+        "question": "భారతదేశ జాతీయ పక్షి ఏది?",
+        "english": "What is the national bird of India?",
+        "options": [
+          "చిలుక / Parrot",
+          "కాకి / Crow",
+          "గువ్వ / Pigeon",
+          "నెమలి / Peacock"
+        ],
+        "correctIndex": 3,
+        "explanation": "Teacher said: భారతదేశ జాతీయ పక్షి నెమలి — The national bird of India is the Peacock."
+      },
+      {
+        "question": "నెమలి ఏ కాలంలో నృత్యం చేస్తుంది అని టీచర్ చెప్పింది?",
+        "english": "In which season does the Peacock dance, as the teacher said?",
+        "options": [
+          "వర్షా కాలం / Rainy season",
+          "వేసవి కాలం / Summer",
+          "వసంత కాలం / Spring",
+          "శీతాకాలం / Winter"
+        ],
+        "correctIndex": 0,
+        "explanation": "Teacher said: వర్షా కాలం లో నెమలి నృత్యం చేస్తుంది — Peacock dances in the rainy season."
+      },
+      {
+        "question": "వర్షా కాలంలో నెమలి ఏమి చేస్తుంది?",
+        "english": "What does the Peacock do in the rainy season?",
+        "options": [
+          "నిద్రపోతుంది / Sleeps",
+          "నృత్యం చేస్తుంది / Dances",
+          "పాటలు పాడుతుంది / Sings",
+          "ఆహారం వెతుకుతుంది / Searches for food"
+        ],
+        "correctIndex": 1,
+        "explanation": "Teacher said: వర్షా కాలం లో నెమలి నృత్యం చేస్తుంది — The Peacock dances in the rainy season."
+      }
+    ]
+  },
+  "watercycle.jsx": {
+    "earthWater": [
+      {
+        "question": "భూమిపై నీటి గురించి ప్రత్యేకత ఏమిటి?",
+        "english": "What is special about Earth's water?",
+        "options": [
+          "ప్రతిరోజు కొత్త నీరు సృష్టించబడుతుంది / New water is created every day",
+          "అదే నీరు బిలియన్ల సంవత్సరాలుగా పునర్వినియోగం అవుతోంది / The same water has been recycled for billions of years",
+          "ఉపయోగించిన తర్వాత నీరు శాశ్వతంగా అదృశ్యమవుతుంది / Water disappears forever once used",
+          "సముద్రాలు మాత్రమే నీటిని పునర్వినియోగిస్తాయి / Only oceans recycle water"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! డైనోసార్లు తాగిన అదే నీటి అణువులను నేడు మనం తాగుతున్నాం — Correct! We drink the very same water molecules dinosaurs once drank."
+      },
+      {
+        "question": "భూమిపై ఉన్న నీటిలో ఎంత శాతం ఉప్పునీరు (సముద్రాలు)?",
+        "english": "What percentage of Earth's water is saltwater (oceans)?",
+        "options": [
+          "50%",
+          "75%",
+          "97%",
+          "25%"
+        ],
+        "correctIndex": 2,
+        "explanation": "సరైనది! భూమిపై నీటిలో 97% ఉప్పునీరే — కేవలం 3% మాత్రమే మంచినీరు — Correct! 97% of Earth's water is saltwater; only about 3% is freshwater."
+      },
+      {
+        "question": "భూమిపై ఎక్కువ మంచినీరు ఎక్కడ లభిస్తుంది?",
+        "english": "Where is most of Earth's freshwater found?",
+        "options": [
+          "నదులు మరియు సరస్సులు / Rivers and lakes",
+          "హిమానీనదాలు మరియు భూగర్భజలాలు / Glaciers and groundwater",
+          "మేఘాలు / Clouds",
+          "సముద్రాలు / Oceans"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! చాలా మంచినీరు హిమానీనదాలు మరియు భూగర్భజలాలలో నిల్వ ఉంటుంది — Correct! Most of Earth's freshwater is locked away in glaciers and groundwater."
+      }
+    ],
+    "evaporation": [
+      {
+        "question": "బాష్పీభవనానికి (ఎవాపొరేషన్) కారణం ఏమిటి?",
+        "english": "What causes evaporation?",
+        "options": [
+          "వెన్నెల / Moonlight",
+          "సూర్యుని వేడి / The Sun's heat",
+          "గాలి మాత్రమే / Wind alone",
+          "వర్షం / Rain"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! సూర్యుని వేడి ద్రవ నీటిని నీటి ఆవిరిగా మారుస్తుంది — Correct! The Sun's heat changes liquid water into water vapor."
+      },
+      {
+        "question": "బాష్పీభవన సమయంలో నీరు దేనిగా మారుతుంది?",
+        "english": "During evaporation, water changes from a liquid into what?",
+        "options": [
+          "ఘన మంచు / Solid ice",
+          "అదృశ్య వాయువు (నీటి ఆవిరి) / Invisible gas (water vapor)",
+          "బురద / Mud",
+          "మంచు రేణువులు / Snowflakes"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! నీరు ఆవిరైనప్పుడు అది కంటికి కనిపించని నీటి ఆవిరి వాయువుగా మారుతుంది — Correct! Evaporated water becomes invisible water vapor gas."
+      },
+      {
+        "question": "కింది వాటిలో బాష్పీభవనానికి రోజువారీ ఉదాహరణ ఏది?",
+        "english": "Which of these is an everyday example of evaporation?",
+        "options": [
+          "వర్షం తర్వాత మడుగు ఎండిపోవడం / A puddle drying up after rain",
+          "ఫ్రీజర్‌లో మంచు ఏర్పడటం / Ice forming in a freezer",
+          "నది కొండ దిగువకు ప్రవహించడం / A river flowing downhill",
+          "మంచు కురవడం / Snow falling"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! వర్షపు మడుగులు సూర్యుని వేడికి నెమ్మదిగా ఆవిరైపోతాయి — Correct! Puddles dry up because the Sun's heat evaporates them into the air."
+      }
+    ],
+    "condensation": [
+      {
+        "question": "సాంద్రీకరణ (కండెన్సేషన్) అంటే ఏమిటి?",
+        "english": "What is condensation?",
+        "options": [
+          "ద్రవ నీరు ఆవిరిగా మారడం / Liquid water turning into vapor",
+          "నీటి ఆవిరి చల్లబడి తిరిగి ద్రవ బిందువులు లేదా మంచుగా మారడం / Water vapor cooling back into liquid droplets or ice",
+          "నీరు భూగర్భంలో ప్రవహించడం / Water flowing underground",
+          "పర్వతాలపై వర్షం పడటం / Rain falling on mountains"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! చల్లబడిన నీటి ఆవిరి తిరిగి ద్రవ బిందువులుగా లేదా మంచుగా మారడమే సాంద్రీకరణ — Correct! Condensation is cooling water vapor changing back into liquid droplets or solid ice."
+      },
+      {
+        "question": "మేఘాలు నిజానికి దేనితో తయారవుతాయి?",
+        "english": "What are clouds actually made of?",
+        "options": [
+          "అదృశ్య నీటి ఆవిరి / Invisible water vapor",
+          "చిన్న ద్రవ బిందువులు లేదా మంచు స్ఫటికాలు / Tiny liquid droplets or ice crystals",
+          "పొగ / Smoke",
+          "కేవలం దుమ్ము / Dust only"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మేఘాలు నీటి ఆవిరితో కాదు, చిన్న ద్రవ బిందువులు లేదా మంచు స్ఫటికాలతో తయారవుతాయి — Correct! Clouds aren't made of water vapor — they're made of tiny visible droplets or ice crystals."
+      },
+      {
+        "question": "సాంద్రీకరణ సాధారణంగా ఎక్కడ జరుగుతుంది?",
+        "english": "Where does condensation often take place?",
+        "options": [
+          "లోతైన భూగర్భంలో / Deep underground",
+          "చల్లని గాలిలో ఎత్తులో, మేఘాలను ఏర్పరుస్తూ / High up in the cool air, forming clouds",
+          "రాళ్ల లోపల / Inside rocks",
+          "సముద్రం అడుగున / At the bottom of the ocean"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! ఎత్తులో గాలి చల్లబడినప్పుడు నీటి ఆవిరి బిందువులుగా మారి మేఘాలను ఏర్పరుస్తుంది — Correct! High in the cool air, water vapor condenses into droplets that form clouds."
+      }
+    ],
+    "precipitation": [
+      {
+        "question": "అవపాతం (ప్రెసిపిటేషన్) అంటే ఏమిటి?",
+        "english": "What is precipitation?",
+        "options": [
+          "సముద్రం నుండి నీరు ఆవిరి కావడం / Water evaporating from the ocean",
+          "సాంద్రీకరించిన నీరు వర్షం, మంచు, వడగళ్ళు లేదా సన్నని మంచుగా నేలపై పడటం / Condensed water falling to the ground as rain, snow, hail, or sleet",
+          "నీరు మట్టిలోకి ఇంకడం / Water soaking into soil",
+          "నదులు సముద్రంలో కలవడం / Rivers flowing into the sea"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! సాంద్రీకరించిన నీటి ఆవిరి వర్షం, మంచు, వడగళ్ళు లేదా సన్నని మంచుగా నేలపై పడటమే అవపాతం — Correct! Precipitation is condensed water falling to the ground as rain, snow, hail, or sleet."
+      },
+      {
+        "question": "కింది వాటిలో అవపాత రూపం కానిది ఏది?",
+        "english": "Which of these is NOT a form of precipitation?",
+        "options": [
+          "వర్షం / Rain",
+          "వడగళ్ళు / Hail",
+          "బాష్పీభవనం / Evaporation",
+          "మంచు / Snow"
+        ],
+        "correctIndex": 2,
+        "explanation": "సరైనది! బాష్పీభవనం నీరు పైకి వెళ్ళే ప్రక్రియ, అవపాతం కాదు — Correct! Evaporation is water rising up into the air, not a form of precipitation."
+      },
+      {
+        "question": "మేఘాల నుండి అవపాతం పడటానికి కారణం ఏమిటి?",
+        "english": "What causes precipitation to fall from clouds?",
+        "options": [
+          "మేఘాలలోని బిందువులు లేదా మంచు చాలా బరువుగా మారి గాలిలో నిలవలేకపోవడం / Droplets or ice in clouds become too heavy to stay airborne",
+          "సూర్యుడు వాటిని కిందికి లాగుతాడు / The Sun pulls them down",
+          "గాలి వాటిని బయటకు తోస్తుంది / Wind pushes them out",
+          "అవి ఆకాశంలో నదులుగా మారతాయి / They turn into rivers in the sky"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! బిందువులు లేదా మంచు స్ఫటికాలు పెద్దవై బరువుగా మారినప్పుడు గురుత్వాకర్షణ వాటిని కిందికి లాగుతుంది — Correct! When droplets or ice crystals grow too heavy, gravity pulls them down as precipitation."
+      }
+    ],
+    "groundwater": [
+      {
+        "question": "భూగర్భజలం (గ్రౌండ్‌వాటర్) అంటే ఏమిటి?",
+        "english": "What is groundwater?",
+        "options": [
+          "నదులలో ప్రవహించే నీరు / Water flowing in rivers",
+          "భూగర్భ రాతి కణాల మధ్య రంధ్రాలు మరియు పగుళ్లలో నిల్వ ఉన్న ద్రవ నీరు / Liquid water stored in the pores and cracks between underground rock particles",
+          "మేఘాలలోని నీరు / Water inside clouds",
+          "హిమానీనదాలలోని గడ్డకట్టిన నీరు / Frozen water in glaciers"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! భూగర్భజలం రాతి కణాల మధ్య రంధ్రాలు, పగుళ్లలో నిల్వ ఉన్న ద్రవ నీరు — ఒక 'పెద్ద దాగిన స్పాంజి'లా — Correct! Groundwater is liquid water stored in the pores and cracks of underground rock, like a giant hidden sponge."
+      },
+      {
+        "question": "'వాటర్ టేబుల్' (నీటి మట్టం) అంటే ఏమిటి?",
+        "english": "What is the 'water table'?",
+        "options": [
+          "నీటితో నిండిన భూగర్భ మట్టి ఎగువ ఉపరితలం / The top surface of underground water-saturated ground",
+          "నీటితో చేసిన బల్ల / A table made of water",
+          "సముద్రం అడుగుభాగం / The bottom of the ocean",
+          "ఒక రకమైన మేఘం / A type of cloud"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! నీటితో నిండిన నేల పైభాగాన్ని వాటర్ టేబుల్ అంటారు — Correct! The water table is the upper level where the underground rock and soil become saturated with water."
+      },
+      {
+        "question": "ఒక బావి అధికంగా భూగర్భజలాన్ని తోడితే ఏమి జరగవచ్చు?",
+        "english": "What can happen if a well pumps too much groundwater?",
+        "options": [
+          "ఏమీ మారదు / Nothing changes",
+          "నీటి మట్టం చాలా దిగువకు పడిపోయి బావులు నీటిని ఇవ్వడం ఆపేయవచ్చు / The water table can drop so low that wells stop supplying water",
+          "అది ఎక్కువ వర్షానికి కారణమవుతుంది / It causes more rain",
+          "అది కొత్త సముద్రాలను సృష్టిస్తుంది / It creates new oceans"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! అధికంగా తోడితే నీటి మట్టం పడిపోయి బావులు నీటిని ఇవ్వలేకపోవచ్చు — Correct! Excessive pumping can lower the water table so much that wells no longer supply water."
+      }
+    ]
+  },
+  "natuarl.jsx": {
+    "earthquake_basics": [
+      {
+        "question": "భూకంపం అంటే ఏమిటి?",
+        "english": "What is an earthquake?",
+        "options": [
+          "భూమి వణకడం / Ground shaking",
+          "భారీ వర్షం / Heavy rain",
+          "నీరు పొంగడం / Water overflowing",
+          "అగ్ని రావడం / Fire coming"
+        ],
+        "correctIndex": 0,
+        "explanation": "భూకంపం అంటే భూమి వణకడం (అర్థ్వెక అంటే భూమి). An earthquake is the shaking of the ground."
+      },
+      {
+        "question": "భూకంపం ఎందుకు వస్తుంది?",
+        "english": "Why does an earthquake happen?",
+        "options": [
+          "భారీ వర్షం వల్ల / Due to heavy rain",
+          "భూమి పొరలు కదలడం వల్ల / Earth's plates moving",
+          "అగ్నిపర్వతం వల్ల మాత్రమే / Only due to volcano",
+          "మేఘాలు పగలడం వల్ల / Due to clouds bursting"
+        ],
+        "correctIndex": 1,
+        "explanation": "భూమి లోపల ఉన్న పొరలు కదలడం వల్ల భూకంపం వస్తుంది. Earthquakes happen when Earth's tectonic plates move."
+      },
+      {
+        "question": "భూకంపం వస్తే రోడ్లకు ఏమి జరుగుతుంది?",
+        "english": "What happens to roads during an earthquake?",
+        "options": [
+          "రోడ్లు పెరుగుతాయి / Roads grow",
+          "రోడ్లు పగిలిపోతాయి / Roads crack",
+          "రోడ్లు మెత్తగా అవుతాయి / Roads become soft",
+          "రోడ్లు కదలవు / Roads don't move"
+        ],
+        "correctIndex": 1,
+        "explanation": "భూకంపం వల్ల రోడ్ క్రాక్ అవుతుంది (Road Crack). Roads crack and break during earthquakes."
+      }
+    ],
+    "earthquake_safety": [
+      {
+        "question": "భూకంపం వస్తే మనం ఏమి చేయాలి?",
+        "english": "What should we do when an earthquake comes?",
+        "options": [
+          "పరిగెత్తాలి / Run outside",
+          "కిటికీ దగ్గర నిలబడాలి / Stand near window",
+          "టేబుల్ కింద వంగి పట్టుకోవాలి / Duck under table and hold",
+          "పైకి చూడాలి / Look up"
+        ],
+        "correctIndex": 2,
+        "explanation": "Drop, Cover, Hold! టేబుల్ కింద వంగి పట్టుకోవాలి — Duck under the table, cover your head and hold on tight."
+      },
+      {
+        "question": "భూకంపం సమయంలో ఏమి చేయకూడదు?",
+        "english": "What should NOT be done during an earthquake?",
+        "options": [
+          "టేబుల్ కింద దాక్కోవడం / Hide under a table",
+          "తల చేత్తో కప్పుకోవడం / Cover head with hands",
+          "అల్మారా, పుస్తకాల దగ్గర నిలబడడం / Stand near shelves/books",
+          "నిశ్శబ్దంగా ఉండడం / Stay calm"
+        ],
+        "correctIndex": 2,
+        "explanation": "వీడియోలో చూపినట్టు అల్మారా, పుస్తకాల షెల్ఫ్ దగ్గర నిలబడడం ప్రమాదం. Never stand near bookshelves or heavy objects — they can fall!"
+      },
+      {
+        "question": "'Drop, Cover, Hold' అంటే తెలుగులో ఏమిటి?",
+        "english": "What does 'Drop, Cover, Hold' mean?",
+        "options": [
+          "పరిగెత్తు, కూర్చో, అరువు / Run, Sit, Shout",
+          "వంగు, కప్పుకో, పట్టుకో / Duck, Cover, Hold",
+          "నిలబడు, నడువు, ఆగు / Stand, Walk, Stop",
+          "ఎగురు, చూడు, వదులు / Jump, Look, Release"
+        ],
+        "correctIndex": 1,
+        "explanation": "Drop, Cover, Hold — వంగు (Drop), తల కప్పుకో (Cover), పట్టుకో (Hold). This is the key earthquake safety action."
+      }
+    ],
+    "flood_basics": [
+      {
+        "question": "వరదలు ఎందుకు వస్తాయి?",
+        "english": "Why do floods occur?",
+        "options": [
+          "భూమి వేడెక్కడం వల్ల / Earth heating",
+          "భారీ వర్షం వల్ల నదులు పొంగడం / Rivers overflowing due to heavy rain",
+          "అగ్నిపర్వతం వల్ల / Due to volcano",
+          "భూమి పగలడం వల్ల / Earth cracking"
+        ],
+        "correctIndex": 1,
+        "explanation": "హెవీ రెయిన్‌ఫాల్ వల్ల రివర్స్ ఓవర్‌ఫ్లో అవుతాయి, అవడం వల్ల వరదలు వస్తాయి. Heavy rainfall causes rivers to overflow, leading to floods."
+      },
+      {
+        "question": "వరద నీటిలో వాహనాలు నడపవచ్చా?",
+        "english": "Can vehicles be driven through flood water?",
+        "options": [
+          "అవును, సురక్షితంగా నడపవచ్చు / Yes, it's safe",
+          "వేగంగా నడిపితే ఫర్వాలేదు / Okay if driving fast",
+          "లేదు, అవాయిడ్ ఫ్లడ్ వాటర్ / No, Avoid Flood Water",
+          "చిన్న కారులో ఫర్వాలేదు / Okay in small cars"
+        ],
+        "correctIndex": 2,
+        "explanation": "Avoid Flood Water! వరద నీటిలో డ్రైవ్ చేయడం అవాయిడ్ చేయాలి. Never drive through flood water — it is extremely dangerous."
+      },
+      {
+        "question": "వరద సమయంలో మనం ఎక్కడికి వెళ్ళాలి?",
+        "english": "Where should we go during a flood?",
+        "options": [
+          "నది దగ్గరికి / Near the river",
+          "ఎత్తైన ప్రదేశానికి / To a high place",
+          "భూమి కింద / Underground",
+          "చెట్టు ఎక్కాలి / Climb a tree"
+        ],
+        "correctIndex": 1,
+        "explanation": "వరద సమయంలో ఎత్తైన ప్రదేశానికి వెళ్ళాలి. During floods, move to higher ground for safety."
+      }
+    ],
+    "volcano_basics": [
+      {
+        "question": "అగ్నిపర్వతం ఎలా పేలుతుంది?",
+        "english": "How does a volcano erupt?",
+        "options": [
+          "వర్షం పడటం వల్ల / Due to rain",
+          "భూమి లోపల ప్రెషర్ ఎక్కువ అయినప్పుడు / When pressure builds inside Earth",
+          "చల్లగా అయినప్పుడు / When it gets cold",
+          "గాలి వేగం వల్ల / Due to wind speed"
+        ],
+        "correctIndex": 1,
+        "explanation": "ప్రెషర్ ఎక్కువ ఆయినప్పుడు అగ్నిపర్వతం పేలుతుంది. Volcanoes erupt when pressure builds up inside the Earth and magma is released."
+      },
+      {
+        "question": "అగ్నిపర్వతం వద్ద సేఫ్టీ జోన్ అంటే ఏమిటి?",
+        "english": "What is the Safety Zone near a volcano?",
+        "options": [
+          "అగ్నిపర్వతం పైన ఉండే జోన్ / Zone on top of volcano",
+          "లావా ప్రవహించే ప్రదేశం / Where lava flows",
+          "అగ్నిపర్వతం నుండి సురక్షిత దూరం / Safe distance from the volcano",
+          "అడవి లోపల ప్రదేశం / Place inside forest"
+        ],
+        "correctIndex": 2,
+        "explanation": "సేఫ్టీ జోన్ అంటే అగ్నిపర్వతం నుండి తగినంత దూరంలో ఉండాల్సిన సురక్షిత ప్రాంతం. Safety Zone is the safe area at a sufficient distance from the volcano."
+      },
+      {
+        "question": "అగ్నిపర్వతం పేలిన తర్వాత ఏమి చేయాలి?",
+        "english": "What should be worn for protection after a volcanic eruption?",
+        "options": [
+          "రెయిన్ కోట్ వేసుకోవాలి / Wear a raincoat",
+          "సేఫ్టీ మాస్క్ వేసుకోవాలి / Wear a safety mask",
+          "గొడుగు పట్టుకోవాలి / Hold an umbrella",
+          "హెల్మెట్ వేసుకోవాలి / Wear a helmet"
+        ],
+        "correctIndex": 1,
+        "explanation": "Wear Safety Masks! అగ్నిపర్వతం పొగ నుండి ప్రొటెక్షన్ కోసం మాస్క్ వేసుకోవాలి. Wear safety masks to protect from volcanic ash and smoke."
+      }
+    ],
+    "disasters_general": [
+      {
+        "question": "ఈ వీడియోలో ఏ ప్రకృతి వైపరీత్యాల గురించి నేర్చుకున్నాం?",
+        "english": "Which natural disasters did we learn about in this video?",
+        "options": [
+          "టైఫూన్, తుఫాను, మంచు / Typhoon, Storm, Snow",
+          "భూకంపం, వరదలు, అగ్నిపర్వతం / Earthquake, Flood, Volcano",
+          "కరవు, మంట, మేఘపాతం / Drought, Fire, Thunderstorm",
+          "సునామి మాత్రమే / Only Tsunami"
+        ],
+        "correctIndex": 1,
+        "explanation": "వీడియోలో భూకంపం (Earthquake), వరదలు (Flood), అగ్నిపర్వతం (Volcano) గురించి నేర్చుకున్నాం!"
+      },
+      {
+        "question": "ప్రకృతి వైపరీత్యాల సమయంలో అత్యంత ముఖ్యమైన విషయం ఏది?",
+        "english": "What is most important during a natural disaster?",
+        "options": [
+          "ఫోన్ వీడియో తీయడం / Taking phone videos",
+          "సురక్షితంగా ఉండడం / Staying safe",
+          "వేగంగా పరిగెత్తడం / Running fast",
+          "ఒంటరిగా ఉండడం / Staying alone"
+        ],
+        "correctIndex": 1,
+        "explanation": "ప్రకృతి వైపరీత్యాల సమయంలో మన సేఫ్టీ అత్యంత ముఖ్యం. During any natural disaster, staying safe is always the top priority!"
+      },
+      {
+        "question": "భూకంపం, వరద, అగ్నిపర్వతం ఇవన్నీ ఏమని పిలుస్తారు?",
+        "english": "Earthquake, flood, and volcano are all called what?",
+        "options": [
+          "మానవ నిర్మిత విపత్తులు / Man-made disasters",
+          "ప్రకృతి వైపరీత్యాలు / Natural disasters",
+          "వాతావరణ మార్పులు / Climate changes",
+          "సముద్ర పర్వాలు / Ocean festivals"
+        ],
+        "correctIndex": 1,
+        "explanation": "భూకంపం, వరదలు, అగ్నిపర్వతం అన్నీ ప్రకృతి వైపరీత్యాలు (Natural Disasters). These are all Natural Disasters!"
+      }
+    ]
+  },
+  "animal.jsx": {
+    "energySource": [
+      {
+        "question": "జంతువులకు కావాల్సిన శక్తి ఎక్కడి నుండి వస్తుంది?",
+        "english": "Where does the energy that animals need come from?",
+        "options": [
+          "జంతువులు మొక్కల్లా తమ ఆహారాన్ని తామే తయారు చేసుకుంటాయి / Animals make their own food like plants",
+          "జంతువులు ఆహారం తినడం ద్వారానే శక్తిని పొందుతాయి / Animals get energy by eating food, since they cannot make their own",
+          "జంతువులు నేరుగా సూర్యకాంతి నుండి శక్తిని పొందుతాయి / Animals get energy directly from sunlight",
+          "జంతువులకు శక్తి అవసరం లేదు / Animals never need energy"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మొక్కలు తమ ఆహారాన్ని తామే తయారు చేసుకుంటాయి, కానీ జంతువులు ఆహారం తినడం ద్వారానే శక్తిని పొందుతాయి — Correct! Unlike plants, animals cannot make their own food — they get energy only by eating."
+      },
+      {
+        "question": "తినే ఆహారాన్ని బట్టి జంతువులను ఎన్ని రకాలుగా విభజిస్తారు?",
+        "english": "Based on what they eat, into how many kinds are animals divided?",
+        "options": [
+          "రెండు / Two",
+          "మూడు — శాకాహారులు, మాంసాహారులు, సర్వభక్షకులు / Three — herbivores, carnivores, omnivores",
+          "ఐదు / Five",
+          "పది / Ten"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! జంతువులను శాకాహారులు, మాంసాహారులు, సర్వభక్షకులు అనే మూడు రకాలుగా విభజిస్తారు — Correct! Animals are grouped into three kinds: herbivores, carnivores, and omnivores."
+      },
+      {
+        "question": "జీవులకు ఆహారం ఎందుకు అవసరం?",
+        "english": "Why do living things need food?",
+        "options": [
+          "అందంగా కనిపించడానికి మాత్రమే / Only to look beautiful",
+          "ఇది శరీర పనులకు శక్తినిచ్చి ఆరోగ్యంగా ఉంచుతుంది / It gives energy for body functions and keeps them healthy",
+          "శబ్దం చేయడానికి మాత్రమే / Only to make noise",
+          "ఆహారానికి నిజమైన ప్రయోజనం లేదు / Food has no real purpose"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! ఆహారం శరీర పనులకు శక్తినిచ్చి జీవులను ఆరోగ్యంగా, చురుకుగా ఉంచుతుంది — Correct! Food provides energy for body functions and keeps living things healthy."
+      }
+    ],
+    "herbivores": [
+      {
+        "question": "శాకాహార జంతువులు (హెర్బివోర్స్) ఏమి తింటాయి?",
+        "english": "What do herbivores eat?",
+        "options": [
+          "మాంసం మాత్రమే / Only meat",
+          "కేవలం మొక్కలు, గడ్డి మరియు ఆకులు మాత్రమే / Only plants, grass, and leaves",
+          "కేవలం కీటకాలు మాత్రమే / Only insects",
+          "కేవలం చేపలు మాత్రమే / Only fish"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! శాకాహారులు మొక్కలు, గడ్డి మరియు ఆకులను మాత్రమే తింటాయి — Correct! Herbivores eat only plants, grass, and leaves."
+      },
+      {
+        "question": "ఆహారాన్ని నమలడానికి, రుబ్బడానికి సహాయపడే హెర్బివోర్ల వెనుక భాగంలోని వెడల్పాటి, చదునైన దంతాలను ఏమంటారు?",
+        "english": "What are the broad, flat back teeth of herbivores called, which help them chew and grind food?",
+        "options": [
+          "కెనైన్స్ / Canines",
+          "మోలార్స్ / Molars",
+          "టాలన్స్ / Talons",
+          "దంతపు కొమ్ములు / Tusks"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మోలార్స్ అనే చదునైన దంతాలు ఆహారాన్ని నమలడానికి, రుబ్బడానికి సహాయపడతాయి — Correct! Flat molars at the back of the mouth help herbivores chew and grind their food."
+      },
+      {
+        "question": "కొన్ని హెర్బివోర్లు ఆహారాన్ని నమలకుండా మింగేసి, దానిని తిరిగి నోటికి తీసుకువచ్చి నమలడాన్ని ఏమంటారు?",
+        "english": "What is it called when some herbivores swallow food without chewing, then bring it back to the mouth to chew again?",
+        "options": [
+          "గ్నాయింగ్ / Gnawing",
+          "చ్యూయింగ్ ది కడ్ (రుమినేషన్) / Chewing the cud (rumination)",
+          "లాపింగ్ / Lapping",
+          "స్కావెంజింగ్ / Scavenging"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! ఈ ఆహారాన్ని 'కడ్' అని, దానిని తిరిగి నమలడాన్ని చ్యూయింగ్ ది కడ్ లేదా రుమినేషన్ అని అంటారు — Correct! This food is called cud, and bringing it back to chew again is called chewing the cud, or rumination."
+      }
+    ],
+    "carnivores": [
+      {
+        "question": "మాంసాహార జంతువులు (కార్నివోర్స్) ఏమి తింటాయి?",
+        "english": "What do carnivores eat?",
+        "options": [
+          "ఇతర జంతువుల మాంసాన్ని మాత్రమే / Only the flesh of other animals",
+          "కేవలం పండ్లు మాత్రమే / Only fruits",
+          "కేవలం గడ్డి మాత్రమే / Only grass",
+          "కేవలం మకరందం మాత్రమే / Only nectar"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! మాంసాహారులు ఇతర జంతువుల మాంసాన్ని మాత్రమే తింటాయి — Correct! Carnivores eat only the flesh of other animals."
+      },
+      {
+        "question": "మాంసాన్ని చీల్చడానికి సహాయపడే మాంసాహారుల పదునైన, వంపు తిరిగిన ముందు దంతాలను ఏమంటారు?",
+        "english": "What are the sharp, pointed, curved front teeth of carnivores called, which help them tear flesh?",
+        "options": [
+          "మోలార్స్ / Molars",
+          "కెనైన్స్ / Canines",
+          "ప్రీమోలార్స్ / Premolars",
+          "ముక్కులు / Beaks"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! కెనైన్స్ అనే పదునైన దంతాలు మాంసాన్ని చీల్చడానికి సహాయపడతాయి — Correct! Sharp, curved canine teeth help carnivores tear the flesh of their prey."
+      },
+      {
+        "question": "గుడ్లగూబలు, డేగల వంటి వేటాడే పక్షులు తమ ఎరను ఎలా పట్టుకుని చీలుస్తాయి?",
+        "english": "How do hunting birds like owls and hawks catch and tear apart their prey?",
+        "options": [
+          "మోలార్స్ తో మాత్రమే / With molars only",
+          "టాలన్స్ అనే వాడి గోళ్లు మరియు వంపు ముక్కులతో / With sharp claws called talons and curved beaks",
+          "దానిని పూర్తిగా మింగడం ద్వారా మాత్రమే / By swallowing it whole only",
+          "దానిని నాకడం ద్వారా / By licking it"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! టాలన్స్ (వాడి గోళ్లు) ఎరను పట్టుకోవడానికి, వంపు ముక్కులు మాంసాన్ని చీల్చడానికి సహాయపడతాయి — Correct! Sharp claws called talons help them grip prey, and curved beaks help tear the flesh apart."
+      }
+    ],
+    "omnivores": [
+      {
+        "question": "సర్వభక్షక జంతువులు (ఆమ్నివోర్స్) ఏమి తింటాయి?",
+        "english": "What do omnivores eat?",
+        "options": [
+          "కేవలం మొక్కలు మాత్రమే / Only plants",
+          "మొక్కలు మరియు ఇతర జంతువుల మాంసం రెండూ / Both plants and the flesh of other animals",
+          "కేవలం మాంసం మాత్రమే / Only meat",
+          "ఏమీ తినవు / Nothing at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! సర్వభక్షకులు మొక్కలు మరియు ఇతర జంతువుల మాంసం రెండింటినీ తింటాయి — Correct! Omnivores eat both plants and the flesh of other animals."
+      },
+      {
+        "question": "సర్వభక్షకులకు పదునైన దంతాలు మరియు చదునైన దంతాలు రెండూ ఎందుకు ఉంటాయి?",
+        "english": "Why do omnivores have both sharp teeth and flat teeth?",
+        "options": [
+          "పదునైన దంతాలు మాంసాన్ని చీల్చడానికి, చదునైన దంతాలు మొక్కల ఆహారాన్ని నమలడానికి / Sharp teeth tear meat, flat teeth chew plant food",
+          "రెండు రకాల దంతాలూ పనికిరానివి / Both kinds of teeth are useless",
+          "అవి పదునైన దంతాలను మాత్రమే ఉపయోగిస్తాయి / They only use sharp teeth",
+          "వాటికి దంతాలే ఉండవు / They have no teeth at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! ముందు పదునైన దంతాలు మాంసాన్ని చీల్చడానికి, వెనుక చదునైన దంతాలు మొక్కల ఆహారాన్ని నమలడానికి సహాయపడతాయి — Correct! Sharp front teeth tear meat like a carnivore's, while flat back teeth chew plant food like a herbivore's."
+      },
+      {
+        "question": "కింది వాటిలో సర్వభక్షక జంతువుకు ఉదాహరణ ఏది?",
+        "english": "Which of these animals is an example of an omnivore?",
+        "options": [
+          "సింహం / Lion",
+          "ఆవు / Cow",
+          "ఎలుగుబంటు / Bear",
+          "జిరాఫీ / Giraffe"
+        ],
+        "correctIndex": 2,
+        "explanation": "సరైనది! ఎలుగుబంటు మొక్కలు మరియు మాంసం రెండింటినీ తినే సర్వభక్షక జంతువు — Correct! Bears are omnivores — they eat both plant foods like berries and meat like fish."
+      }
+    ],
+    "foodChain": [
+      {
+        "question": "ప్రతి ఆహారపు గొలుసు ప్రారంభంలో ఉండే ప్రధాన శక్తి మూలం ఏది?",
+        "english": "What is the primary source of energy at the start of every food chain?",
+        "options": [
+          "చంద్రుడు / The Moon",
+          "సూర్యుడు / The Sun",
+          "నీరు / Water",
+          "మట్టి / Soil"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! ప్రతి ఆహారపు గొలుసు సూర్యుడు అనే ప్రధాన శక్తి మూలంతో మొదలవుతుంది — Correct! Every food chain starts with the Sun, the primary source of energy."
+      },
+      {
+        "question": "సూర్యుడు → గడ్డి → జింక → సింహం అనే ఆహారపు గొలుసులో గడ్డి పాత్ర ఏమిటి?",
+        "english": "In the food chain Sun → Grass → Deer → Lion, what role does the grass play?",
+        "options": [
+          "మాంసాహారి / Carnivore",
+          "ఉత్పత్తిదారు, కిరణజన్య సంయోగక్రియ ద్వారా తన ఆహారాన్ని తానే తయారు చేసుకుంటుంది / Producer, which makes its own food by photosynthesis",
+          "స్కావెంజర్ / Scavenger",
+          "సర్వభక్షకుడు / Omnivore"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! గడ్డి వంటి ఆకుపచ్చ మొక్కలు కిరణజన్య సంయోగక్రియ ద్వారా తమ ఆహారాన్ని తామే తయారు చేసుకుంటాయి కాబట్టి వాటిని ఉత్పత్తిదారులు లేదా ఆటోట్రాఫ్‌లు అంటారు — Correct! Green plants like grass make their own food through photosynthesis, so they're called producers, or autotrophs."
+      },
+      {
+        "question": "ఆహారపు గొలుసులో ఒక్క లింక్ తెగిపోయినా ప్రకృతి సమతుల్యతకు ఏమవుతుంది?",
+        "english": "What happens to the balance of nature if even one link in a food chain is broken?",
+        "options": [
+          "ఏమీ మారదు / Nothing changes at all",
+          "అది మొత్తం గొలుసును, ప్రకృతి సమతుల్యతను దెబ్బతీస్తుంది / It disturbs the whole chain and upsets the balance of nature",
+          "తక్షణమే మరింత శక్తి సృష్టించబడుతుంది / More energy is created instantly",
+          "సూర్యుడు ప్రకాశించడం ఆగిపోతుంది / The Sun stops shining"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! ఒక్క లింక్ తెగిపోయినా అది మొత్తం ఆహారపు గొలుసును, ప్రకృతి సమతుల్యతను దెబ్బతీస్తుంది — Correct! Breaking even one link disrupts the whole chain and upsets the balance of nature."
+      }
+    ]
+  },
+  "bodyparts.jsx": {
+    "heart": [
+      {
+        "question": "గుండె యొక్క ప్రాథమిక కార్యం ఏమిటి?",
+        "english": "What is the primary function of the heart?",
+        "options": [
+          "ఆహారాన్ని జీర్ణం చేయడం / Digest food",
+          "రక్తం పంపడం / Pump blood",
+          "శ్వాస ప్రక్రియ / Breathing",
+          "ఆలోచన చేయడం / Thinking"
+        ],
+        "correctIndex": 1,
+        "explanation": "అది సరైనది! గుండె రక్తాన్ని శరీరం అంతటా పంపుతుంది — Correct! The heart pumps blood throughout the body."
+      },
+      {
+        "question": "గుండెకు ఎన్ని గదులు ఉన్నాయి?",
+        "english": "How many chambers does the human heart have?",
+        "options": [
+          "రెండు / Two",
+          "మూడు / Three",
+          "నాలుగు / Four",
+          "ఐదు / Five"
+        ],
+        "correctIndex": 2,
+        "explanation": "అది సరైనది! గుండెకు నాలుగు గదులు ఉన్నాయి — నిమ్న గుండె, ఉచ్చ గుండె — Correct! Four chambers: two upper atria, two lower ventricles."
+      },
+      {
+        "question": "ఆక్సిజన్ సమృద్ధ రక్తం గుండె నుండి ఎక్కడికి వెళుతుంది?",
+        "english": "What carries oxygen-rich blood from the heart?",
+        "options": [
+          "సిరలు / Veins",
+          "ధమనులు / Arteries",
+          "కేశనాళికలు / Capillaries",
+          "లిమ్ఫ / Lymph"
+        ],
+        "correctIndex": 1,
+        "explanation": "అది సరైనది! ధమనులు ఆక్సిజన్ సమృద్ధ రక్తాన్ని గుండె నుండి వెళ్ళవేస్తాయి — Correct! Arteries carry oxygen-rich blood away from the heart."
+      }
+    ],
+    "brain": [
+      {
+        "question": "మెదడు ఏమీ నియంత్రిస్తుంది?",
+        "english": "What does the brain control?",
+        "options": [
+          "జీర్ణక్రియ మాత్రమే / Only digestion",
+          "కండరాల కదలిక మరియు ఆలోచన / Muscle movement and thought",
+          "రక్త ప్రసరణ మాత్రమే / Only blood circulation",
+          "శ్వాస ప్రక్రియ మాత్రమే / Only breathing"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మెదడు మన ఆలోచన, కదలిక, భావాలు సమస్తాన్ని నియంత్రిస్తుంది — Correct! The brain controls all thoughts, movements, and emotions."
+      },
+      {
+        "question": "మెదడు శరీరంలో ఎక్కడ ఉంటుంది?",
+        "english": "Where is the brain located in the body?",
+        "options": [
+          "కడుపులో / In the stomach",
+          "గుండెలో / In the heart",
+          "నుండు / In the skull",
+          "వెన్నెముకలో / In the spine"
+        ],
+        "correctIndex": 2,
+        "explanation": "సరైనది! మెదడు నుండులో (నలుపటిలో) ఉంటుంది, అది సుরక్షితం ఉంటుంది — Correct! The brain is inside the skull, where it is well protected."
+      },
+      {
+        "question": "మెదడు ఎందుకు అవసరమైనది?",
+        "english": "Why is the brain necessary?",
+        "options": [
+          "కేవలం శరీర బరువుకు / Just for body weight",
+          "ఆలోచన, జ్ఞాపకశక్తి, నిర్ణయాలు / Thinking, memory, and decisions",
+          "కేవలం నిద్ర కోసం / Just for sleep",
+          "రక్తం ఉత్పత్తి కోసం / For blood production"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మెదడు ఆలోచన, జ్ఞాపకం, ఇంద్రియ ప్రక్రియలను నియంత్రిస్తుంది — Correct! The brain handles all thinking, memory, and sensory processing."
+      }
+    ],
+    "lungs": [
+      {
+        "question": "ఫుఫ్ఫుసాల యొక్క ప్రధాన కార్యం ఏమిటి?",
+        "english": "What is the main function of the lungs?",
+        "options": [
+          "రక్తం ఫిల్టర్ చేయడం / Filter blood",
+          "ఆక్సిజన్ మరియు కార్బన్ డయాక్సైడ్ మార్పిడి / Exchange oxygen and carbon dioxide",
+          "ఆహారాన్ని జీర్ణం చేయడం / Digest food",
+          "శరీర ఉష్ణోగ్రత నియంత్రణ / Regulate body temperature"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! ఫుఫ్ఫుసాలు ఆక్సిజన్‌ను గ్రహించుకుంటాయి మరియు కార్బన్ డయాక్సైడ్‌ను విడుదల చేస్తాయి — Correct! Lungs exchange oxygen for carbon dioxide."
+      },
+      {
+        "question": "మనకు ఎన్ని ఫుఫ్ఫుసాలు ఉన్నాయి?",
+        "english": "How many lungs do we have?",
+        "options": [
+          "ఒకటి / One",
+          "రెండు / Two",
+          "మూడు / Three",
+          "నాలుగు / Four"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మానవులకు రెండు ఫుఫ్ఫుసాలు ఉన్నాయి — ఎడమ మరియు కుడి — Correct! We have two lungs: left and right."
+      },
+      {
+        "question": "ఫుఫ్ఫుసాలు శ్వాస ప్రక్రియకు ఎలా సహాయం చేస్తాయి?",
+        "english": "How do the lungs help us breathe?",
+        "options": [
+          "రక్తాన్ని సవతి చేస్తాయి / They purify blood",
+          "గాలిని లోపలికి తీసుకుంటాయి మరియు విషపదార్థాన్ని వెలికితీస్తాయి / They draw air in and release waste",
+          "కండరాలను సంకోచం చేస్తాయి / They contract muscles",
+          "ఉష్ణశక్తిని ఉత్పత్తి చేస్తాయి / They produce heat"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! ఫుఫ్ఫుసాలు ఆక్సిజన్‌ను గ్రహించుకుంటాయి, కార్బన్ డయాక్సైడ్‌ను విడుదల చేస్తాయి — Correct! Lungs take in oxygen and release carbon dioxide."
+      }
+    ],
+    "bones": [
+      {
+        "question": "పూర్తిగా ఉన్న మానవ కంకాళంలో ఎన్ని ఎముకలు ఉన్నాయి?",
+        "english": "How many bones are in the adult human skeleton?",
+        "options": [
+          "176",
+          "186",
+          "206",
+          "226"
+        ],
+        "correctIndex": 2,
+        "explanation": "సరైనది! పూర్తిగా మానవులకు 206 ఎముకలు ఉన్నాయి — Correct! Adult humans have 206 bones."
+      },
+      {
+        "question": "మానవ శరీరంలో చిన్నమైన ఎముక ఏది?",
+        "english": "What is the smallest bone in the human body?",
+        "options": [
+          "ఫిబులా / Fibula",
+          "స్టేపెస్ (చెవిలో) / Stapes (in the ear)",
+          "రేడియస్ / Radius",
+          "కోకిక్స్ / Coccyx"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! స్టేపెస్ చెవిలో ఉండే చిన్నమైన ఎముక — కేవలం 2.8 మిమీ — Correct! The stapes in the ear is the smallest bone, only 2.8mm long."
+      },
+      {
+        "question": "ఎముక యొక్క ప్రధాన కార్యం ఏమిటి?",
+        "english": "What is the main function of bones?",
+        "options": [
+          "శక్తి నిల్వ / Store energy",
+          "శరీర నిర్మాణం మరియు రక్త కణాల ఉత్పత్తి / Support body structure and produce blood cells",
+          "కండరాల చలనం మాత్రమే / Just muscle movement",
+          "ఆహారాన్ని జీర్ణం చేయడం / Digest food"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! ఎముకలు శరీరానికి నిర్మాణం ఇస్తాయి, కాపర్ కణాలను ఉత్పత్తి చేస్తాయి — Correct! Bones provide structure and produce blood cells."
+      }
+    ],
+    "kidneys": [
+      {
+        "question": "మూత్రపిండాలు (కిడనీలు) ఏ కార్యాన్ని చేస్తాయి?",
+        "english": "What function do the kidneys perform?",
+        "options": [
+          "రక్తం పంపడం / Pump blood",
+          "రక్తం నుండి వ్యర్థాలను ఫిల్టర్ చేయడం / Filter waste from blood",
+          "ఆహారాన్ని జీర్ణం చేయడం / Digest food",
+          "శ్వాసను నియంత్రించడం / Control breathing"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మూత్రపిండాలు రక్తాన్ని ఫిల్టర్ చేస్తాయి మరియు వ్యర్థాన్ని విడుదల చేస్తాయి — Correct! Kidneys filter blood and remove waste as urine."
+      },
+      {
+        "question": "మనకు ఎన్ని మూత్రపిండాలు ఉన్నాయి?",
+        "english": "How many kidneys do we have?",
+        "options": [
+          "ఒకటి / One",
+          "రెండు / Two",
+          "మూడు / Three",
+          "నాలుగు / Four"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మనకు రెండు మూత్రపిండాలు ఉన్నాయి — ఎడమ మరియు కుడి — Correct! We have two kidneys: left and right."
+      },
+      {
+        "question": "మూత్రపిండాలు ఎక్కడ ఉంటాయి?",
+        "english": "Where are the kidneys located?",
+        "options": [
+          "గుండెలో / In the heart",
+          "నుండుకు వెనుక (వెన్నెముకకు వెంట) / Behind the spine",
+          "కడుపులో సమక్షం / Below the stomach",
+          "ఫుఫ్ఫుసాలకు వెంట / Next to the lungs"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! మూత్రపిండాలు వెన్నెముక యొక్క రెండు వైపులా, కడుపుకు వెనుకవైపు ఉంటాయి — Correct! Kidneys are on both sides of the spine, in the back of the abdomen."
+      }
+    ]
+  },
+  "electric.jsx": {
+    "electrons": [
+      {
+        "question": "ఎలక్ట్రాన్ అంటే ఏమిటి?",
+        "english": "What is an electron?",
+        "options": [
+          "అణువు లోపల ఉండే చిన్న ఛార్జ్ కణం, కణం మరియు తరంగం రెండూ గా ప్రవర్తిస్తుంది / A tiny charged entity inside an atom, acting as both a particle and a wave",
+          "ఒక రకమైన అయస్కాంతం / A type of magnet",
+          "ఒక స్విచ్ / A switch",
+          "ఒక వైరు ముక్క / A piece of wire"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! ఎలక్ట్రాన్ అణువు లోపల ఉండే చిన్న ఛార్జ్‌గల ఎంటిటీ, ఇది కణం మరియు తరంగం రెండింటిలాగా ప్రవర్తిస్తుంది — Correct! An electron is a tiny charged entity inside an atom that behaves as both a particle and a wave."
+      },
+      {
+        "question": "వైరు ద్వారా ఎలక్ట్రాన్ల ప్రవాహాన్ని ఏమని పిలుస్తారు?",
+        "english": "What do we call the flow of electrons through a wire?",
+        "options": [
+          "నీటి ప్రవాహం / Water flow",
+          "విద్యుత్ ప్రవాహం (కరెంట్) / Electric current",
+          "శబ్ద తరంగం / A sound wave",
+          "వెలుతురు కిరణం / A light beam"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! ఎలక్ట్రాన్లు వైరు ద్వారా ప్రవహించడాన్నే విద్యుత్ ప్రవాహం (కరెంట్) అంటారు — Correct! The flow of electrons through a wire is called electric current."
+      },
+      {
+        "question": "మన ఇంట్లో ఉపకరణాలు పనిచేయడానికి దైనందిన విద్యుత్ ఏమి శక్తినిస్తుంది?",
+        "english": "What does everyday electricity power in our homes?",
+        "options": [
+          "వాషింగ్ మెషీన్లు మరియు లైట్ల వంటి ఉపకరణాలు / Appliances like washing machines and lights",
+          "కేవలం కంప్యూటర్లు మాత్రమే / Only computers",
+          "కేవలం ఫోన్లు మాత్రమే / Only phones",
+          "ఇంట్లో ఏదీ లేదు / Nothing in the house"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! దైనందిన విద్యుత్ వాషింగ్ మెషీన్లు, వాక్యూమ్‌లు, లైట్ల వంటి ఉపకరణాలకు శక్తినిస్తుంది — Correct! Everyday electricity powers appliances like washing machines, vacuums, and lights."
+      }
+    ],
+    "magnets": [
+      {
+        "question": "అయస్కాంతం పేపర్ క్లిప్‌ల వంటి వస్తువులను ఎలా ఆకర్షిస్తుంది?",
+        "english": "How does a magnet attract objects like paperclips?",
+        "options": [
+          "తాకకుండానే అదృశ్య శక్తితో / With an invisible force, without touching them",
+          "వాటిని వేడి చేయడం ద్వారా / By heating them",
+          "వాటిని తేలికగా చేయడం ద్వారా / By making them lighter",
+          "శబ్దం ఉత్పత్తి చేయడం ద్వారా / By producing sound"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! అయస్కాంతాలు తాకకుండానే లోహ వస్తువులను ఆకర్షించే అదృశ్య శక్తిని ఉత్పత్తి చేస్తాయి — Correct! Magnets exert an invisible force that attracts metal objects without touching them."
+      },
+      {
+        "question": "విద్యుదయస్కాంతం (ఎలక్ట్రోమాగ్నెట్) అంటే ఏమిటి?",
+        "english": "What is an electromagnet?",
+        "options": [
+          "సహజంగా దొరికే రాయి / A naturally occurring rock",
+          "ఇనుప మేకు చుట్టూ ఉన్న కాయిల్ ద్వారా విద్యుత్ ప్రవాహాన్ని పంపడం ద్వారా సృష్టించబడిన అయస్కాంతం / A magnet created by passing electric current through a wire coil, often around an iron nail",
+          "ఒక రకమైన బ్యాటరీ / A type of battery",
+          "ఒక గాజు వస్తువు / A glass object"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! విద్యుదయస్కాంతం అనేది ఇనుప మేకు చుట్టూ ఉన్న వైరు కాయిల్ ద్వారా విద్యుత్ ప్రవాహాన్ని పంపడం వలన సృష్టించబడిన అయస్కాంతం — Correct! An electromagnet is a magnet created by passing electric current through a wire coil, often wrapped around an iron nail."
+      },
+      {
+        "question": "వైరు గుండా ఎలక్ట్రాన్లు కదిలినప్పుడు ఏమి ఏర్పడుతుంది?",
+        "english": "What is created around a wire when electrons move through it?",
+        "options": [
+          "ఒక అయస్కాంత క్షేత్రం / A magnetic field",
+          "ఒక శబ్ద తరంగం / A sound wave",
+          "ఒక రసాయన చర్య / A chemical reaction",
+          "ఒక కాంతి కిరణం / A light beam"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! కదులుతున్న ఎలక్ట్రాన్లు వైరు చుట్టూ ఒక అయస్కాంత క్షేత్రాన్ని సృష్టిస్తాయి — ఇది అయస్కాంతత్వం మరియు విద్యుత్ ఎంత దగ్గరగా అనుసంధానమై ఉన్నాయో చూపిస్తుంది — Correct! Moving electrons create a magnetic field around the wire, showing how deeply connected magnetism and electricity are."
+      }
+    ],
+    "circuits": [
+      {
+        "question": "సర్క్యూట్‌లో స్విచ్‌లు ఏమి పని చేస్తాయి?",
+        "english": "What role do switches play in a circuit?",
+        "options": [
+          "అవి కరెంట్‌ను నియంత్రిస్తూ సర్క్యూట్‌ను పూర్తి చేస్తాయి లేదా విచ్ఛిన్నం చేస్తాయి / They act as gatekeepers that complete or break the circuit, controlling the current",
+          "అవి విద్యుత్‌ను ఉత్పత్తి చేస్తాయి / They generate electricity",
+          "అవి వేడిని తగ్గిస్తాయి మాత్రమే / They only reduce heat",
+          "అవి ధ్వనిని నియంత్రిస్తాయి / They control sound"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! స్విచ్‌లు గేట్‌కీపర్‌లలాగా పనిచేస్తాయి, సర్క్యూట్‌ను పూర్తి చేయడం లేదా విచ్ఛిన్నం చేయడం ద్వారా కరెంట్‌ను నియంత్రిస్తాయి — Correct! Switches act as gatekeepers, completing or breaking the circuit to control the current."
+      },
+      {
+        "question": "స్విచ్‌ను ఆన్ చేసినప్పుడు సర్క్యూట్‌లో ఏమి జరుగుతుంది?",
+        "english": "What happens to the circuit when a switch is turned ON?",
+        "options": [
+          "సర్క్యూట్ పూర్తవుతుంది, కరెంట్ ప్రవహించడానికి అనుమతిస్తుంది / The circuit is completed, allowing current to flow",
+          "సర్క్యూట్ విచ్ఛిన్నమవుతుంది / The circuit breaks",
+          "ఏమీ జరగదు / Nothing happens",
+          "విద్యుత్ నిల్వ అవుతుంది / Electricity gets stored"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! స్విచ్ ఆన్‌లో ఉన్నప్పుడు సర్క్యూట్ పూర్తవుతుంది, దీని వలన కరెంట్ ప్రవహిస్తుంది — Correct! When the switch is ON, the circuit is completed and current can flow through it."
+      },
+      {
+        "question": "స్విచ్‌ను ఆఫ్ చేసినప్పుడు (సర్క్యూట్ తెరిచినప్పుడు) ఏమి జరుగుతుంది?",
+        "english": "What happens when a switch is turned OFF (the circuit is open)?",
+        "options": [
+          "కరెంట్ ప్రవాహం ఆగిపోతుంది / The flow of current stops",
+          "కరెంట్ రెట్టింపు అవుతుంది / The current doubles",
+          "అయస్కాంతత్వం పెరుగుతుంది / Magnetism increases",
+          "వైరు వేడెక్కిపోతుంది మాత్రమే / The wire just heats up"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! స్విచ్ ఆఫ్‌లో ఉన్నప్పుడు సర్క్యూట్ విచ్ఛిన్నమవుతుంది, దీని వలన కరెంట్ ప్రవాహం ఆగిపోతుంది — Correct! When the switch is OFF, the circuit breaks and the flow of current stops."
+      }
+    ],
+    "spaceApproach": [
+      {
+        "question": "SPACE పద్ధతిలో 'Explore' (అన్వేషించడం) అంటే ఏమిటి?",
+        "english": "In the SPACE approach, what does 'Explore' mean?",
+        "options": [
+          "పిల్లల ప్రారంభ ఆలోచనలను అన్వేషించడం / Exploring children's initial ideas about a topic",
+          "పరీక్ష పేపర్లను తయారు చేయడం / Preparing exam papers",
+          "పాఠశాల భవనాన్ని అన్వేషించడం / Exploring the school building",
+          "కొత్త పుస్తకాలను కొనడం / Buying new books"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! SPACE పద్ధతిలో 'Explore' అంటే డ్రాయింగ్ లేదా చర్చ ద్వారా పిల్లల ప్రారంభ ఆలోచనలను అన్వేషించడం — Correct! 'Explore' means drawing out and exploring children's initial ideas through drawing or discussion."
+      },
+      {
+        "question": "SPACE పద్ధతిలో 'Test' (పరీక్షించడం) అంటే ఏమిటి?",
+        "english": "In the SPACE approach, what does 'Test' mean?",
+        "options": [
+          "ఉపాధ్యాయులు మాత్రమే మాట్లాడటం / Only the teacher talking",
+          "ఫెయిర్ టెస్ట్‌లు మరియు పరిశీలన ద్వారా పిల్లలు తమ ఆలోచనలను పరీక్షించడం / Letting children test their own ideas through fair tests and observation",
+          "పిల్లలను ఇంటికి పంపడం / Sending children home",
+          "పుస్తకాలను మాత్రమే చదవడం / Just reading books"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! 'Test' దశలో పిల్లలు ఫెయిర్ టెస్ట్‌లు మరియు పరిశీలన ద్వారా తమ ఆలోచనలను స్వయంగా పరీక్షించుకుంటారు — Correct! In the 'Test' stage, children test their own ideas through fair tests and observation."
+      },
+      {
+        "question": "SPACE పద్ధతిలో 'Generalize' (సాధారణీకరించడం) అంటే ఏమిటి?",
+        "english": "In the SPACE approach, what does 'Generalize' mean?",
+        "options": [
+          "నేర్చుకున్న ఆలోచనలను కొత్త సందర్భాలకు వర్తింపజేయడం / Encouraging children to apply their ideas to new contexts",
+          "పరీక్షను రద్దు చేయడం / Cancelling the test",
+          "మళ్లీ అదే పాఠాన్ని చదవడం / Reading the same lesson again",
+          "పాఠశాల మారడం / Changing schools"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! 'Generalize' దశలో పిల్లలు తమ ఆలోచనలను కొత్త సందర్భాలకు విస్తరించి వర్తింపజేస్తారు — Correct! In the 'Generalize' stage, children extend and apply their ideas to new contexts."
+      }
+    ],
+    "iotSmart": [
+      {
+        "question": "1995 నుండి 2024 వరకు తరగతి గది నియంత్రణ ఎలా మారింది?",
+        "english": "How has classroom control evolved from 1995 to 2024?",
+        "options": [
+          "మాన్యువల్ స్విచ్‌ల నుండి IoT ఆధారిత మైక్రోకంట్రోలర్ సిస్టమ్‌లకు / From manual switches to automated, IoT-based microcontroller systems",
+          "ఎలాంటి మార్పు లేకుండా అలాగే ఉంది / It stayed exactly the same",
+          "కంప్యూటర్లు పూర్తిగా తీసివేయబడ్డాయి / Computers were removed entirely",
+          "మరింత మాన్యువల్‌గా మారింది / It became more manual"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! లాజిక్ నియంత్రణ మాన్యువల్ స్విచ్‌ల నుండి సెన్సార్లు, మైక్రోకంట్రోలర్లు మరియు IoT ఆధారిత ఆటోమేటెడ్ సిస్టమ్‌లకు పరిణామం చెందింది — Correct! Logic control has evolved from manual switches to automated, sensor-and-microcontroller-driven IoT systems."
+      },
+      {
+        "question": "స్మార్ట్ క్లాస్‌రూమ్‌లో ఒక సెన్సార్ ఒక వ్యక్తి నడుచుకుంటూ వస్తున్నట్లు గుర్తించినప్పుడు ఏమి జరుగుతుంది?",
+        "english": "In a smart classroom, what happens when a sensor detects a person walking in?",
+        "options": [
+          "ఏమీ జరగదు / Nothing happens at all",
+          "మైక్రోకంట్రోలర్ స్వయంచాలకంగా లైట్లు మరియు ఫ్యాన్‌లను ఆన్ చేస్తుంది / The microcontroller automatically turns on lights and fans",
+          "తరగతి గది తాళం వేయబడుతుంది / The classroom gets locked",
+          "ఇంటర్నెట్ ఆగిపోతుంది / The internet shuts down"
+        ],
+        "correctIndex": 1,
+        "explanation": "సరైనది! సెన్సార్ సంకేతాన్ని మైక్రోకంట్రోలర్‌కు పంపుతుంది, అది లైట్లు మరియు ఫ్యాన్‌లను స్వయంచాలకంగా ఆన్ చేస్తుంది — Correct! The sensor sends a signal to the microcontroller, which automatically switches on lights and fans."
+      },
+      {
+        "question": "సాంప్రదాయ తరగతి గదితో పోలిస్తే స్మార్ట్ తరగతి గది యొక్క ముఖ్య ప్రయోజనం ఏమిటి?",
+        "english": "Compared to a traditional classroom, what is a key benefit of a smart classroom?",
+        "options": [
+          "ఇది శక్తిని ఆదా చేస్తుంది మరియు అభ్యాసాన్ని వ్యక్తిగతీకరిస్తుంది / It saves energy and personalizes learning, instead of wasting power with generic lessons",
+          "ఇది మరింత మాన్యువల్ నియంత్రణను ఉపయోగిస్తుంది / It uses more manual control",
+          "ఇది ఎక్కువ విద్యుత్‌ను వృథా చేస్తుంది / It wastes more electricity",
+          "ఇది పుస్తకాలను నిషేధిస్తుంది / It bans books"
+        ],
+        "correctIndex": 0,
+        "explanation": "సరైనది! సాంప్రదాయ తరగతి గదులు మాన్యువల్‌గా, వృథాగా ఉంటే, స్మార్ట్ తరగతి గదులు ఆటోమేటెడ్, శక్తిని ఆదా చేసేలా, వ్యక్తిగతీకరించిన అభ్యాసాన్ని అందిస్తాయి — Correct! While traditional classrooms are manual and wasteful, smart classrooms are automated, energy-saving, and offer personalized learning."
+      }
+    ]
+  }
+}

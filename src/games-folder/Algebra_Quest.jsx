@@ -685,7 +685,7 @@ export default function App() {
   const lesson = LESSONS[topicIdx];
 
   return (
-    <>
+    <div className="algebra-quest-root" style={{ width: "100%", height: "100%" }}>
       {screen === "home" && <HomeScreen onSelect={i => { setTopicIdx(i); setScreen("lesson"); }} tvEvent={tvEvent} />}
       
       {screen === "lesson" && <LessonScreen lesson={lesson} onStart={() => setScreen("quiz")} onBack={() => setScreen("home")} tvEvent={tvEvent} />}
@@ -693,6 +693,6 @@ export default function App() {
       {screen === "quiz" && <QuizScreen lesson={lesson} onFinish={r => { setResult(r); setScreen("result"); }} onBack={() => setScreen("lesson")} tvEvent={tvEvent} />}
       
       {screen === "result" && <ResultScreen lesson={lesson} result={result} onRetry={() => setScreen("quiz")} onHome={() => setScreen("home")} tvEvent={tvEvent} />}
-    </>
+    </div>
   );
 }

@@ -190,7 +190,7 @@ export default function TrigQuestTV() {
   });
 
   return (
-    <div style={styles.tvScreen}>
+    <div className="trigame-root" style={styles.tvScreen}>
       <div style={styles.appContainer}>
         
         <div style={styles.tabContainer}>
