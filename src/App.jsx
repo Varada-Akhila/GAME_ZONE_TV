@@ -1,46 +1,46 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 
-import BubbleGame      from './games-folder/bubble_game';
-import BubbleLetters   from './games-folder/bubble_letters';
-import Game2048        from './games-folder/game2048';
-import LinkPipePuzzle  from './games-folder/link_pipe_puzzle';
-import MathGame        from './games-folder/math_game';
-import SnakeGame       from './games-folder/snake_game';
-import SpaceWave       from './games-folder/space_wave';
-import WordGame        from './games-folder/word_game';
-import WordTyping      from './games-folder/word_typing';
-import NumberLineMatch from './games-folder/numberlinematch.jsx';
-import BallShooterGame from './games-folder/ballreduction.jsx';
-import TrigQuestWeb    from './games-folder/trigame.jsx';
-import Algebra_Quest   from './games-folder/Algebra_Quest.jsx';
-import PeriodicChallenge from './games-folder/Periodic_table.jsx';
-import NumberJump      from './games-folder/number_jump.jsx';
-import PunctuationPop  from './games-folder/Pun_wordpop.jsx';
-import HarmonyQuest    from './games-folder/Harmony_Quest.jsx';
-import ChessGame       from './games-folder/Chess.jsx';
-import newquizgame     from './games-folder/newquizgame.jsx';
-import bodyparts       from './games-folder/bodyparts.jsx';
-import SolarSystemQuizGame from './games-folder/solar.jsx';
-import WaterJourneyQuizGame from './games-folder/watercycle.jsx';
-import AnimalDietQuizGame from './games-folder/animal.jsx';
-import SeasonsQuizGame from './games-folder/seasons.jsx';
-import electric from './games-folder/electric.jsx';
-import ColorLearningGame from './games-folder/colurdrop.jsx';
-import natuarl from './games-folder/natuarl.jsx';
-import BrainMazeAdventure from './games-folder/BrainMazeAdventure';
-import TVCodingGame from './games-folder/TVCodingGame';
-import AnimalRescueAdventure from "./games-folder/AnimalRescueAdventure";
-import GeographyExplorerTV from './games-folder/GeographyExplorerTv.jsx'
-import LabExperimentTV from './games-folder/LabExperimentTV.jsx';
-import StatesCapitalTVQuiz from './games-folder/StatesCapitalTVQuiz';
-import OddOneOut from './games-folder/Odd-One-Out';
-import TimeTeacherQuiz from './games-folder/TimeTeacherQuiz';
-import MountainsQuiz from './games-folder/MountainsQuiz';
-import ScientistsQuiz from './games-folder/ScientistsQuiz';
-import AnimalBabiesQuiz from './games-folder/AnimalBabiesQuiz';
-import NumberSeriesQuiz from './games-folder/NumberSeriesQuiz';
-import TypesOfEnergyTVQuiz from './games-folder/TypesOfEnergyTVQuiz.jsx';
+const BubbleGame           = React.lazy(() => import('./games-folder/bubble_game'));
+const BubbleLetters        = React.lazy(() => import('./games-folder/bubble_letters'));
+const Game2048             = React.lazy(() => import('./games-folder/game2048'));
+const LinkPipePuzzle       = React.lazy(() => import('./games-folder/link_pipe_puzzle'));
+const MathGame             = React.lazy(() => import('./games-folder/math_game'));
+const SnakeGame            = React.lazy(() => import('./games-folder/snake_game'));
+const SpaceWave            = React.lazy(() => import('./games-folder/space_wave'));
+const WordGame             = React.lazy(() => import('./games-folder/word_game'));
+const WordTyping           = React.lazy(() => import('./games-folder/word_typing'));
+const NumberLineMatch      = React.lazy(() => import('./games-folder/numberlinematch.jsx'));
+const BallShooterGame      = React.lazy(() => import('./games-folder/ballreduction.jsx'));
+const TrigQuestWeb         = React.lazy(() => import('./games-folder/trigame.jsx'));
+const Algebra_Quest        = React.lazy(() => import('./games-folder/Algebra_Quest.jsx'));
+const PeriodicChallenge    = React.lazy(() => import('./games-folder/Periodic_table.jsx'));
+const NumberJump           = React.lazy(() => import('./games-folder/number_jump.jsx'));
+const PunctuationPop       = React.lazy(() => import('./games-folder/Pun_wordpop.jsx'));
+const HarmonyQuest         = React.lazy(() => import('./games-folder/Harmony_Quest.jsx'));
+const ChessGame            = React.lazy(() => import('./games-folder/Chess.jsx'));
+const newquizgame          = React.lazy(() => import('./games-folder/newquizgame.jsx'));
+const bodyparts            = React.lazy(() => import('./games-folder/bodyparts.jsx'));
+const SolarSystemQuizGame  = React.lazy(() => import('./games-folder/solar.jsx'));
+const WaterJourneyQuizGame = React.lazy(() => import('./games-folder/watercycle.jsx'));
+const AnimalDietQuizGame   = React.lazy(() => import('./games-folder/animal.jsx'));
+const SeasonsQuizGame      = React.lazy(() => import('./games-folder/seasons.jsx'));
+const electric             = React.lazy(() => import('./games-folder/electric.jsx'));
+const ColorLearningGame    = React.lazy(() => import('./games-folder/colurdrop.jsx'));
+const natuarl              = React.lazy(() => import('./games-folder/natuarl.jsx'));
+const BrainMazeAdventure   = React.lazy(() => import('./games-folder/BrainMazeAdventure'));
+const TVCodingGame         = React.lazy(() => import('./games-folder/TVCodingGame'));
+const AnimalRescueAdventure = React.lazy(() => import('./games-folder/AnimalRescueAdventure'));
+const GeographyExplorerTV  = React.lazy(() => import('./games-folder/GeographyExplorerTv.jsx'));
+const LabExperimentTV      = React.lazy(() => import('./games-folder/LabExperimentTV.jsx'));
+const StatesCapitalTVQuiz  = React.lazy(() => import('./games-folder/StatesCapitalTVQuiz'));
+const OddOneOut            = React.lazy(() => import('./games-folder/Odd-One-Out'));
+const TimeTeacherQuiz      = React.lazy(() => import('./games-folder/TimeTeacherQuiz'));
+const MountainsQuiz        = React.lazy(() => import('./games-folder/MountainsQuiz'));
+const ScientistsQuiz       = React.lazy(() => import('./games-folder/ScientistsQuiz'));
+const AnimalBabiesQuiz     = React.lazy(() => import('./games-folder/AnimalBabiesQuiz'));
+const NumberSeriesQuiz     = React.lazy(() => import('./games-folder/NumberSeriesQuiz'));
+const TypesOfEnergyTVQuiz  = React.lazy(() => import('./games-folder/TypesOfEnergyTVQuiz.jsx'));
 
 const GAMES = [
   { id:'bubble_game',    name:'Bubble Shooter',    component:BubbleGame,     category:'arcade',   emoji:'🫧', color:'#e74c3c', bg:'linear-gradient(135deg,#ffb3b3,#e74c3c)', desc:'Shoot & pop coloured bubbles' },
@@ -328,7 +328,13 @@ function GamePage({ gameId, onBack }) {
   return (
     <div className="tv-play-page">
       <div className="tv-play-frame">
-        <GameComponent />
+        <React.Suspense fallback={
+          <div style={{ display: 'flex', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center', background: '#000', color: '#fff', fontSize: '1.5rem', fontFamily: "'Fredoka One', cursive" }}>
+            Loading Game...
+          </div>
+        }>
+          <GameComponent />
+        </React.Suspense>
       </div>
 
       {showBackOverlay && (
