@@ -238,15 +238,18 @@ const TOPICS = {
   ],
 };
 
+export const config = {
+  videoSrc: VIDEO_SRC,
+  topics: TOPICS,
+  theme: C,
+  title: "🪐 Solar System Adventure",
+  loadingIcon: "🪐",
+  loadingText: "Preparing your space questions…",
+  numQuestions: 5
+};
+
 export default function SolarSystemQuizGame() {
   return (
-    <VideoQuizTemplate
-      videoSrc={VIDEO_SRC}
-      topics={TOPICS}
-      theme={C}
-      title="🪐 Solar System Adventure"
-      loadingIcon="🪐"
-      loadingText="Preparing your space questions…"
-    />
+    <VideoQuizTemplate {...config} />
   );
 }

@@ -132,8 +132,9 @@ const C = {
   wrongBg: "#fef2f2"
 };
 
-export default function StatesCapitalTVQuiz() {
-  const topics = useMemo(() => {
+export const config = {
+  videoSrc: StatesVideo,
+  topics: (() => {
     const t = {};
     STATES_DATA.forEach((item, idx) => {
       // Pick 3 wrong capitals dynamically from other states
@@ -154,17 +155,16 @@ export default function StatesCapitalTVQuiz() {
       }];
     });
     return t;
-  }, []);
+  })(),
+  theme: C,
+  title: "🇮🇳 India States & Capitals",
+  loadingIcon: "🇮🇳",
+  loadingText: "Preparing capital questions",
+  numQuestions: 5
+};
 
+export default function StatesCapitalTVQuiz() {
   return (
-    <VideoQuizTemplate
-      videoSrc={StatesVideo}
-      topics={topics}
-      theme={C}
-      title="🇮🇳 India States & Capitals"
-      loadingIcon="🇮🇳"
-      loadingText="Preparing capital questions"
-      numQuestions={5}
-    />
+    <VideoQuizTemplate {...config} />
   );
 }

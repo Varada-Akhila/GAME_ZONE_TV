@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import EnergyVideo from "../assets/TypesOfEnergy.mp4";
-// const EnergyVideo ="https://games.vrplay.in/videos/types_of_energy.mp4";
+import VideoPage from "./VideoPage";
+const EnergyVideo = "https://games.vrplay.in/videos/types_of_energy.mp4";
 
 export default function TypesOfEnergyTVQuiz() {
 
@@ -1505,191 +1505,22 @@ useEffect(() => {
 
 if (!videoEnded) {
   return (
-    <div
-      style={{
-
-        minHeight: "100vh",
-        position: "relative",
-        overflow: "hidden",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background:"linear-gradient(135deg,#020617,#0f172a,#0f766e,#0369a1)",
+    <VideoPage
+      videoSrc={EnergyVideo}
+      theme={{
+        accent: "#0f766e",
+        accentLt: "#14b8a6",
+        gold: "#f59e0b",
+        correct: "#22c55e",
+        wrong: "#ef4444",
+        text: "#f8fafc",
+        muted: "#cbd5e1",
+        border: "rgba(255,255,255,0.08)"
       }}
-    >
-      {/* =====================================
-              Animated Background
-      ===================================== */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:"radial-gradient(circle at 20% 20%,rgba(250,204,21,.18),transparent 35%),radial-gradient(circle at 80% 30%,rgba(59,130,246,.18),transparent 35%),radial-gradient(circle at 50% 90%,rgba(34,197,94,.15),transparent 35%)",
-        }}
-      />
-      {/* =====================================
-              Floating Icons
-      ===================================== */}
-
-      <div
-        style={{
-          position: "absolute",
-          top: "8%",
-          left: "6%",
-          fontSize: "70px",
-          animation: "float 4s ease-in-out infinite",
-          opacity: .9
-        }}
-      >
-        ☀️
-      </div>
-
-      <div
-        style={{
-          position: "absolute",
-          top: "15%",
-          right: "8%",
-          fontSize: "65px",
-          animation: "float 5s ease-in-out infinite",
-          opacity: .9
-        }}
-      >
-        ⚡
-      </div>
-      <div
-        style={{
-
-          position: "absolute",
-          bottom: "12%",
-          left: "12%",
-          fontSize: "65px",
-          animation: "float 6s ease-in-out infinite",
-          opacity: .9
-        }}
-      >
-        🌊
-      </div>
-
-      <div
-        style={{
-          position: "absolute",
-          bottom: "15%",
-          right: "10%",
-          fontSize: "65px",
-          animation: "float 5.5s ease-in-out infinite",
-          opacity: .9
-
-        }}
-      >
-        💨
-      </div>
-
-      <div
-        style={{
-          position: "absolute",
-          top: "48%",
-          left: "4%",
-          fontSize: "55px",
-          animation: "float 5s ease-in-out infinite",
-          opacity: .8
-        }}
-      >
-        🔋
-      </div>
-
-      {/* =====================================
-              Skip Button
-      ===================================== */}
-
-      <div
-        onClick={() => setVideoEnded(true)}
-        style={{
-          position: "absolute",
-          top: 35,
-          right: 35,
-          padding: "18px 42px",
-          borderRadius: "18px",
-          background:"linear-gradient(135deg,#f59e0b,#f97316)",
-          color: "#fff",
-          fontWeight: "800",
-          fontSize: "24px",
-          cursor: "pointer",
-          zIndex: 100,
-          border: "3px solid rgba(255,255,255,.25)",
-          boxShadow: "0 0 30px rgba(249,115,22,.65)",
-          transition: ".3s"
-        }}
-      >
-        ⏭ Skip Video
-      </div>
-
-      {/* =====================================
-                Title
-      ===================================== */}
-
-      <div
-        style={{
-          position: "absolute",
-          top: 25,
-          left: 35,
-          color: "#fff",
-          zIndex: 20
-        }}
-      >
-        <div
-          style={{
-            fontSize: "50px",
-            fontWeight: "900",
-            color: "#fde047",
-            textShadow:"0 0 20px rgba(250,204,21,.8)"
-          }}
-        >
-          ⚡ Types of Energy
-        </div>
-
-        <div
-          style={{
-            fontSize: "22px",
-            color: "#cbd5e1",
-            marginTop: "8px"
-          }}
-        >
-          Learn • Explore • Play • Quiz
-        </div>
-
-      </div>
-
-      {/* =====================================
-                Video Card
-      ===================================== */}
-
-      <div
-        style={{
-          width: "94%",
-          maxWidth: "1500px",
-          padding: "18px",
-          borderRadius: "30px",
-          background:"rgba(255,255,255,.08)",
-          backdropFilter: "blur(14px)",
-          border:"2px solid rgba(255,255,255,.15)",
-          boxShadow:"0 0 45px rgba(0,255,255,.25)",
-          zIndex: 10
-        }}
-      >
-        <video autoPlay controls onEnded={() => setVideoEnded(true)}
-          style={{
-            width: "100%",
-            maxHeight: "84vh",
-            borderRadius: "22px",
-            background: "#000"
-          }}
-        >
-          <source src={EnergyVideo} type="video/mp4"/>
-        </video>
-      </div>
-    </div>
+      title="Types of Energy Quiz"
+      onDone={() => setVideoEnded(true)}
+    />
   );
-
 }
 
 /* ==========================================================

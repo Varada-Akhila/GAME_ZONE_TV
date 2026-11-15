@@ -147,15 +147,18 @@ const TOPICS = {
   ],
 };
 
+export const config = {
+  videoSrc: VIDEO_SRC,
+  topics: TOPICS,
+  theme: C,
+  title: "⚡ Invisible to Visible Tech",
+  loadingIcon: "⚡",
+  loadingText: "Preparing your electricity questions…",
+  numQuestions: 5
+};
+
 export default function VideoQuizGame() {
   return (
-    <VideoQuizTemplate
-      videoSrc={VIDEO_SRC}
-      topics={TOPICS}
-      theme={C}
-      title="⚡ Invisible to Visible Tech"
-      loadingIcon="⚡"
-      loadingText="Preparing your electricity questions…"
-    />
+    <VideoQuizTemplate {...config} />
   );
 }

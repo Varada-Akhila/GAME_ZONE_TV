@@ -140,15 +140,18 @@ const TOPICS = {
   ],
 };
 
+export const config = {
+  videoSrc: VIDEO_SRC,
+  topics: TOPICS,
+  theme: C,
+  title: "🫀 Body Parts & Health",
+  loadingIcon: "🫀",
+  loadingText: "Preparing your body parts & health questions…",
+  numQuestions: 5
+};
+
 export default function VideoQuizGame() {
   return (
-    <VideoQuizTemplate
-      videoSrc={VIDEO_SRC}
-      topics={TOPICS}
-      theme={C}
-      title="🫀 Body Parts & Health"
-      loadingIcon="🫀"
-      loadingText="Preparing your body parts & health questions…"
-    />
+    <VideoQuizTemplate {...config} />
   );
 }

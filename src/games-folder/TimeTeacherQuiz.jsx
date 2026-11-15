@@ -44,8 +44,9 @@ const generateQuestion = (hour, minute) => {
   };
 };
 
-export default function TimeTeacherQuiz() {
-  const topics = useMemo(() => {
+export const config = {
+  videoSrc: TimeVideo,
+  topics: (() => {
     const t = {};
     let idx = 0;
     for (let h = 1; h <= 12; h++) {
@@ -62,17 +63,16 @@ export default function TimeTeacherQuiz() {
       });
     }
     return t;
-  }, []);
+  })(),
+  theme: C,
+  title: "⏰ Time Teacher Quiz",
+  loadingIcon: "⏰",
+  loadingText: "Preparing time questions",
+  numQuestions: 5
+};
 
+export default function TimeTeacherQuiz() {
   return (
-    <VideoQuizTemplate
-      videoSrc={TimeVideo}
-      topics={topics}
-      theme={C}
-      title="⏰ Time Teacher Quiz"
-      loadingIcon="⏰"
-      loadingText="Preparing time questions"
-      numQuestions={5}
-    />
+    <VideoQuizTemplate {...config} />
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import VideoPage from "./VideoPage";
 // import ScientistsVideo from "../assets/scientists-video.mp4";
 // import page1 from "../assets/scientists/page1.png";
 // import page2 from "../assets/scientists/page2.png";
@@ -1331,55 +1332,22 @@ useEffect(() => {
 ========================================= */
 
 if (!videoEnded) {
-
   return (
-
-    <div
-      style={{
-        minHeight: "100vh",
-        background:"linear-gradient(135deg,#020617,#0f172a,#1e3a8a,#7c3aed)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "20px"
+    <VideoPage
+      videoSrc={ScientistsVideo}
+      theme={{
+        accent: "#7c3aed",
+        accentLt: "#a78bfa",
+        gold: "#f59e0b",
+        correct: "#10b981",
+        wrong: "#ef4444",
+        text: "#f8fafc",
+        muted: "#94a3b8",
+        border: "rgba(255,255,255,0.08)"
       }}
-    >
-      <div
-        onClick={() => setVideoEnded(true)}
-        style={{
-        position:"absolute",
-        top:"50px",
-        right:"25px",
-        background:"linear-gradient(135deg,#f59e0b,#fbbf24)",
-        fontSize:isMobile ? "16px" : "24px",
-        padding:isMobile ? "10px 18px" : "15px 35px",
-        borderRadius:"18px",
-        color:"#fff",
-        fontWeight:"700",
-        cursor:"pointer",
-        zIndex:"999"
-        }}
-        >
-        ⏭ Skip Video
-        </div>
-
-      <video
-        autoPlay
-        controls
-        onEnded={() => setVideoEnded(true)}
-        style={{
-          width:"100%",
-          maxWidth:"1200px",
-          maxHeight: "90vh",
-          borderRadius: "30px",
-          boxShadow:"0 15px 50px rgba(0,0,0,.5)"
-        }}
-      >
-        <source src={ScientistsVideo} type="video/mp4"/> 
-      </video>
-
-    </div>
-
+      title="Great Scientists Quiz"
+      onDone={() => setVideoEnded(true)}
+    />
   );
 }
 

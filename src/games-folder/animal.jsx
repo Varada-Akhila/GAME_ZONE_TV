@@ -140,15 +140,18 @@ const TOPICS = {
   ],
 };
 
+export const config = {
+  videoSrc: VIDEO_SRC,
+  topics: TOPICS,
+  theme: C,
+  title: "🦁 జంతువులు ఏమి తింటాయి? — What Do Animals Eat?",
+  loadingIcon: "🦁",
+  loadingText: "Preparing your animal eating habits questions…",
+  numQuestions: 5
+};
+
 export default function AnimalDietQuizGame() {
   return (
-    <VideoQuizTemplate
-      videoSrc={VIDEO_SRC}
-      topics={TOPICS}
-      theme={C}
-      title="🦁 జంతువులు ఏమి తింటాయి? — What Do Animals Eat?"
-      loadingIcon="🦁"
-      loadingText="Preparing your animal eating habits questions…"
-    />
+    <VideoQuizTemplate {...config} />
   );
 }

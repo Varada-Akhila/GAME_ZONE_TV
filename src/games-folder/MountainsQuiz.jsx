@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import VideoPage from "./VideoPage";
 // import MountainVideo from "../assets/mountains-video.mp4";
 // import page1 from "../assets/mountains/page1.png";
 // import page2 from "../assets/mountains/page2.png";
@@ -716,54 +717,22 @@ useEffect(() => {
 ========================================= */
 
 if (!videoEnded) {
-
   return (
-
-    <div
-      style={{
-        minHeight: "100vh",
-        background:"linear-gradient(135deg,#dbeafe,#eff6ff)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        padding:isMobile ? "10px" : "20px",
+    <VideoPage
+      videoSrc={MountainVideo}
+      theme={{
+        accent: "#2563eb",
+        accentLt: "#3b82f6",
+        gold: "#f59e0b",
+        correct: "#16a34a",
+        wrong: "#dc2626",
+        text: "#1e293b",
+        muted: "#64748b",
+        border: "rgba(0,0,0,0.08)"
       }}
-    >
-        <div
-            onClick={() => setVideoEnded(true)}
-            style={{
-            position:"absolute",
-            top:isMobile ? "15px":"50px",
-            right:isMobile ? "15px":"25px",
-            padding:isMobile ? "10px 20px":"15px 35px",
-            fontSize:isMobile ? "16px":"24px",
-            background:"linear-gradient(135deg,#f59e0b,#fbbf24)",
-            borderRadius:"18px",
-            color:"#fff", 
-            fontWeight:"700",
-            cursor:"pointer",
-            zIndex:"999"
-            }}
-            >
-            ⏭ Skip Video
-          </div>
-
-      <video
-        autoPlay
-        controls
-        onEnded={() =>setVideoEnded(true)}
-        style={{
-          width:"100%",
-          maxHeight:isMobile ? "60vh":"90vh",
-          borderRadius: "25px",
-          boxShadow:"0 10px 40px rgba(37,99,235,.25)"
-        }}
-      >
-        <source src={MountainVideo} type="video/mp4"/>
-      </video>
-
-    </div>
-
+      title="Mountains Quiz"
+      onDone={() => setVideoEnded(true)}
+    />
   );
 }
     if (showImages) {

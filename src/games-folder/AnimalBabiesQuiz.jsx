@@ -706,16 +706,18 @@ const C = {
   wrongBg: "#fef2f2"
 };
 
+export const config = {
+  videoSrc: AnimalBabyVideo,
+  topics: TOPICS,
+  theme: C,
+  title: "🐾 Animal Babies Quiz",
+  loadingIcon: "🐾",
+  loadingText: "Preparing animal baby questions",
+  numQuestions: 5
+};
+
 export default function AnimalBabiesQuiz() {
   return (
-    <VideoQuizTemplate
-      videoSrc={AnimalBabyVideo}
-      topics={TOPICS}
-      theme={C}
-      title="🐾 Animal Babies Quiz"
-      loadingIcon="🐾"
-      loadingText="Preparing animal baby questions"
-      numQuestions={5}
-    />
+    <VideoQuizTemplate {...config} />
   );
 }

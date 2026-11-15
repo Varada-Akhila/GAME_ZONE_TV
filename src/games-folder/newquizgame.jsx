@@ -146,15 +146,18 @@ const TOPICS = {
    in that topic has been shown at least once. Works across Play Again too.
 ───────────────────────────────────────────────────────────────────────── */
 
+export const config = {
+  videoSrc: VIDEO_SRC,
+  topics: TOPICS,
+  theme: C,
+  title: "🎬 Watch & Learn",
+  loadingIcon: "🐅",
+  loadingText: "Preparing your national symbols questions…",
+  numQuestions: 5
+};
+
 export default function VideoQuizGame() {
   return (
-    <VideoQuizTemplate
-      videoSrc={VIDEO_SRC}
-      topics={TOPICS}
-      theme={C}
-      title="🎬 Watch & Learn"
-      loadingIcon="🐅"
-      loadingText="Preparing your national symbols questions…"
-    />
+    <VideoQuizTemplate {...config} />
   );
 }

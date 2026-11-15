@@ -140,16 +140,18 @@ const TOPICS = {
   ],
 };
 
+export const config = {
+  videoSrc: VIDEO_SRC,
+  topics: TOPICS,
+  theme: C,
+  title: "🌦️ రుతువుల మాయాజాలం! — The Magic of Seasons!",
+  loadingIcon: "🌦️",
+  loadingText: "Preparing your seasons questions…",
+  numQuestions: 5
+};
+
 export default function SeasonsQuizGame() {
   return (
-    <VideoQuizTemplate
-      videoSrc={VIDEO_SRC}
-      topics={TOPICS}
-      theme={C}
-      title="🌦️ రుతువుల మాయాజాలం! — The Magic of Seasons!"
-      loadingIcon="🌦️"
-      loadingText="Preparing your seasons questions…"
-      numQuestions={NUM_Q}
-    />
+    <VideoQuizTemplate {...config} />
   );
 }

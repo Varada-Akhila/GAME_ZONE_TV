@@ -140,15 +140,18 @@ const TOPICS = {
   ],
 };
 
+export const config = {
+  videoSrc: VIDEO_SRC,
+  topics: TOPICS,
+  theme: C,
+  title: "💧 Endless Journey of Water",
+  loadingIcon: "💧",
+  loadingText: "Preparing your water cycle questions…",
+  numQuestions: 5
+};
+
 export default function WaterJourneyQuizGame() {
   return (
-    <VideoQuizTemplate
-      videoSrc={VIDEO_SRC}
-      topics={TOPICS}
-      theme={C}
-      title="💧 Endless Journey of Water"
-      loadingIcon="💧"
-      loadingText="Preparing your water cycle questions…"
-    />
+    <VideoQuizTemplate {...config} />
   );
 }

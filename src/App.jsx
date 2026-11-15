@@ -19,28 +19,21 @@ const NumberJump           = React.lazy(() => import('./games-folder/number_jump
 const PunctuationPop       = React.lazy(() => import('./games-folder/Pun_wordpop.jsx'));
 const HarmonyQuest         = React.lazy(() => import('./games-folder/Harmony_Quest.jsx'));
 const ChessGame            = React.lazy(() => import('./games-folder/Chess.jsx'));
-const newquizgame          = React.lazy(() => import('./games-folder/newquizgame.jsx'));
-const bodyparts            = React.lazy(() => import('./games-folder/bodyparts.jsx'));
-const SolarSystemQuizGame  = React.lazy(() => import('./games-folder/solar.jsx'));
-const WaterJourneyQuizGame = React.lazy(() => import('./games-folder/watercycle.jsx'));
-const AnimalDietQuizGame   = React.lazy(() => import('./games-folder/animal.jsx'));
-const SeasonsQuizGame      = React.lazy(() => import('./games-folder/seasons.jsx'));
-const electric             = React.lazy(() => import('./games-folder/electric.jsx'));
 const ColorLearningGame    = React.lazy(() => import('./games-folder/colurdrop.jsx'));
-const natuarl              = React.lazy(() => import('./games-folder/natuarl.jsx'));
 const BrainMazeAdventure   = React.lazy(() => import('./games-folder/BrainMazeAdventure'));
 const TVCodingGame         = React.lazy(() => import('./games-folder/TVCodingGame'));
 const AnimalRescueAdventure = React.lazy(() => import('./games-folder/AnimalRescueAdventure'));
 const GeographyExplorerTV  = React.lazy(() => import('./games-folder/GeographyExplorerTv.jsx'));
 const LabExperimentTV      = React.lazy(() => import('./games-folder/LabExperimentTV.jsx'));
-const StatesCapitalTVQuiz  = React.lazy(() => import('./games-folder/StatesCapitalTVQuiz'));
 const OddOneOut            = React.lazy(() => import('./games-folder/Odd-One-Out'));
-const TimeTeacherQuiz      = React.lazy(() => import('./games-folder/TimeTeacherQuiz'));
 const MountainsQuiz        = React.lazy(() => import('./games-folder/MountainsQuiz'));
 const ScientistsQuiz       = React.lazy(() => import('./games-folder/ScientistsQuiz'));
-const AnimalBabiesQuiz     = React.lazy(() => import('./games-folder/AnimalBabiesQuiz'));
 const NumberSeriesQuiz     = React.lazy(() => import('./games-folder/NumberSeriesQuiz'));
 const TypesOfEnergyTVQuiz  = React.lazy(() => import('./games-folder/TypesOfEnergyTVQuiz.jsx'));
+
+// Centralized Player for Video + Quiz games
+const CentralVideoQuizPlayer = React.lazy(() => import('./games-folder/CentralVideoQuizPlayer'));
+const AdminPortal = React.lazy(() => import('./games-folder/AdminPortal'));
 
 const GAMES = [
   { id:'bubble_game',    name:'Bubble Shooter',    component:BubbleGame,     category:'arcade',   emoji:'🫧', color:'#e74c3c', bg:'linear-gradient(135deg,#ffb3b3,#e74c3c)', desc:'Shoot & pop coloured bubbles' },
@@ -61,26 +54,26 @@ const GAMES = [
   { id:'Pun_wordpop',  name:'Punctuation & Word Pop',    component:PunctuationPop,category:'arcade',   emoji:'.?!', color:'#57c7d6', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'Punctuation & Word Pop' },
   { id:'Harmony_Quest',  name:'Harmony Quest',    component:HarmonyQuest,category:'learning',   emoji:'😊', color:'#dd2727', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'Harmony_Quest' },
   { id:'chess',  name:'Play Chess',    component:ChessGame,category:'learning',   emoji:'♟️', color:'#4a8817', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'valid moves highlight in gold' },
-  { id:'quiz_game',  name:'national india ',    component:newquizgame,category:'Quiz',   emoji:'🐅', color:'#6e087b', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'India' },
-  { id:'body_parts',  name:'learn body parts ',    component:bodyparts,category:'Quiz',   emoji:'🧍‍♀️', color:'#455a9f', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'learn body parts with me' },
-  { id:'solar',  name:'Explore the sky ',    component:SolarSystemQuizGame,category:'Quiz',   emoji:'🌇', color:'#83dea1', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'explore the world' },
-  { id:'Water Cycle',  name:'Water Cycle ',    component:WaterJourneyQuizGame,category:'Quiz',   emoji:'🫗', color:'#e93ee3', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'explore the water cycle' },
-  { id:'Animal chain',  name:'Animal Chain ',    component:AnimalDietQuizGame,category:'Quiz',   emoji:'🐮', color:'#e9603e', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'explore the animal food plan' },
-  { id:'Seasons',  name:'Seasons',    component:SeasonsQuizGame,category:'Quiz',   emoji:'🌦️', color:'#7a3ee9', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'explore the season plan' },
-  { id:'electric',  name:'electric',    component:electric,category:'Quiz',   emoji:'🔌', color:'#f5f1fb', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'explore the electricity plan' },
+  { id:'quiz_game',  name:'national india ',    component:CentralVideoQuizPlayer,category:'Quiz',   emoji:'🐅', color:'#6e087b', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'India' },
+  { id:'body_parts',  name:'learn body parts ',    component:CentralVideoQuizPlayer,category:'Quiz',   emoji:'🧍‍♀️', color:'#455a9f', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'learn body parts with me' },
+  { id:'solar',  name:'Explore the sky ',    component:CentralVideoQuizPlayer,category:'Quiz',   emoji:'🌇', color:'#83dea1', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'explore the world' },
+  { id:'Water Cycle',  name:'Water Cycle ',    component:CentralVideoQuizPlayer,category:'Quiz',   emoji:'🫗', color:'#e93ee3', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'explore the water cycle' },
+  { id:'Animal chain',  name:'Animal Chain ',    component:CentralVideoQuizPlayer,category:'Quiz',   emoji:'🐮', color:'#e9603e', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'explore the animal food plan' },
+  { id:'Seasons',  name:'Seasons',    component:CentralVideoQuizPlayer,category:'Quiz',   emoji:'🌦️', color:'#7a3ee9', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'explore the season plan' },
+  { id:'electric',  name:'electric',    component:CentralVideoQuizPlayer,category:'Quiz',   emoji:'🔌', color:'#f5f1fb', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'explore the electricity plan' },
   { id:'colour',  name:'Colour Drop',    component:ColorLearningGame,category:'Puzzle',   emoji:'🎨', color:'#e11cbd', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'Drop the ring at same color' },
-  { id:'Natural',  name:'Natuarl',    component:natuarl,category:'Quiz',   emoji:'🌊', color:'#1ce130', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'Learn and Be Safe' },
+  { id:'Natural',  name:'Natuarl',    component:CentralVideoQuizPlayer,category:'Quiz',   emoji:'🌊', color:'#1ce130', bg:'linear-gradient(135deg,#bae6fd,#0284c7)', desc:'Learn and Be Safe' },
   { id:'brain_maze', name:'Brain Maze Adventure', component:BrainMazeAdventure, category:'learning', emoji:'🧠', color:'#facc15', bg:'linear-gradient(135deg,#fde68a,#facc15)',  desc:'Solve questions and escape the maze' },
   { id:'tv_coding_game', name:'TV Coding Game', component:TVCodingGame, category:'learning', emoji:'🤖', color:'#14b8a6', bg:'linear-gradient(135deg,#99f6e4,#14b8a6)', desc:'Control robot using TV remote commands' },
   { id: "animal_rescue", name: "Animal Rescue Adventure", component: AnimalRescueAdventure, category: "arcade", emoji: "🐾", color: "#22c55e", bg: "linear-gradient(135deg,#bbf7d0,#22c55e)", desc: "Rescue animals using TV remote controls" },
   { id:'geography_explorer', name:'Geography Explorer', component: GeographyExplorerTV, category:'Quiz', emoji:'🌍', color:'#0ea5e9', bg:'linear-gradient(135deg,#7dd3fc,#0ea5e9)', desc:'Explore countries, flags, capitals and landmarks' },
   { id:'lab_experiment', name:'Lab Experiment', component: LabExperimentTV, category:'learning', emoji:'🧪', color:'#06b6d4', bg:'linear-gradient(135deg,#67e8f9,#0284c7)', desc:'Memorize formulas and create scientific experiments' },
-  { id:'states_capitals_quiz', name:'States & Capitals Quiz', component: StatesCapitalTVQuiz, category:'Quiz', emoji:'🇮🇳', color:'#8b5cf6', bg:'linear-gradient(135deg,#c4b5fd,#8b5cf6)', desc:'Learn and test Indian states and capitals' },
+  { id:'states_capitals_quiz', name:'States & Capitals Quiz', component: CentralVideoQuizPlayer, category:'Quiz', emoji:'🇮🇳', color:'#8b5cf6', bg:'linear-gradient(135deg,#c4b5fd,#8b5cf6)', desc:'Learn and test Indian states and capitals' },
   { id:'odd_one_out', name:'Odd One Out', component: OddOneOut, category:'learning', emoji:'🎯', color:'#f59e0b', bg:'linear-gradient(135deg,#fde68a,#f59e0b)', desc:'Find the odd item from the given category' },
-  { id:'time_teacher_quiz', name:'Time Teacher Quiz', component: TimeTeacherQuiz, category:'Quiz', emoji:'⏰', color:'#06b6d4', bg:'linear-gradient(135deg,#67e8f9,#0891b2)', desc:'Learn and identify time using analog clocks' },
+  { id:'time_teacher_quiz', name:'Time Teacher Quiz', component: CentralVideoQuizPlayer, category:'Quiz', emoji:'⏰', color:'#06b6d4', bg:'linear-gradient(135deg,#67e8f9,#0891b2)', desc:'Learn and identify time using analog clocks' },
   { id:'mountains_quiz', name:'Mountains Quiz', component: MountainsQuiz, category:'Quiz', emoji:'🏔️', color:'#3b82f6', bg:'linear-gradient(135deg,#bfdbfe,#3b82f6)', desc:'Learn world mountains, countries, continents and fun facts' },
   { id:'scientists_quiz',name:'Great Scientists Quiz', component: ScientistsQuiz, category:'Quiz', emoji:'🔬', color:'#8b5cf6', bg:'linear-gradient(135deg,#c4b5fd,#7c3aed)', desc:'Learn famous scientists, inventors and discoveries' },
-  { id:'animal_babies_quiz', name:'Animal Babies Quiz', component: AnimalBabiesQuiz, category:'Quiz', emoji:'🐾', color:'#22c55e', bg:'linear-gradient(135deg,#bbf7d0,#22c55e)', desc:'Learn baby animal names and test your knowledge' },
+  { id:'animal_babies_quiz', name:'Animal Babies Quiz', component: CentralVideoQuizPlayer, category:'Quiz', emoji:'🐾', color:'#22c55e', bg:'linear-gradient(135deg,#bbf7d0,#22c55e)', desc:'Learn baby animal names and test your knowledge' },
   { id:'number_series_quiz', name:'Number Series Quiz', component:NumberSeriesQuiz, category:'Quiz', emoji:'🔢', color:'#14b8a6', bg:'linear-gradient(135deg,#99f6e4,#14b8a6)', desc:'Learn number patterns and solve series questions' },
   {id: 'types_of_energy_quiz',name: 'Types of Energy Quiz',component:TypesOfEnergyTVQuiz, category:'Quiz',emoji: '⚡',color: '#22c55e',bg: 'linear-gradient(135deg,#bbf7d0,#22c55e)',desc: 'Explore light, heat, sound, electrical, mechanical, chemical, solar, wind, and hydro energy through fun quizzes'},
 ];
@@ -111,7 +104,7 @@ const CAT_DESCRIPTIONS = {
 };
 
 /* ── PAGE 1: Home — category tiles only ─────────────────────────── */
-function HomePage({ onSelectCategory }) {
+function HomePage({ onSelectCategory, onSelectAdmin }) {
   const [idx, setIdx] = useState(0);
 
   const gameCounts = Object.fromEntries(
@@ -126,10 +119,14 @@ function HomePage({ onSelectCategory }) {
         onSelectCategory(CATEGORIES[idx].id, null);
         e.preventDefault();
       }
+      if (e.key === 'a' || e.key === 'A') {
+        onSelectAdmin();
+        e.preventDefault();
+      }
     };
     window.addEventListener('keydown', h);
     return () => window.removeEventListener('keydown', h);
-  }, [idx, onSelectCategory]);
+  }, [idx, onSelectCategory, onSelectAdmin]);
 
   return (
     <div className="tv-home">
@@ -138,7 +135,29 @@ function HomePage({ onSelectCategory }) {
           <span className="tv-logo-icon">🎮</span>
           <span className="tv-logo-text">GameZone TV</span>
         </div>
-        <span className="tv-nav-hint">⬅ ➡ Navigate &nbsp;·&nbsp; OK to Select</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <span className="tv-nav-hint">⬅ ➡ Navigate &nbsp;·&nbsp; OK to Select &nbsp;·&nbsp; A for Admin</span>
+          <button 
+            onClick={onSelectAdmin}
+            style={{
+              padding: '6px 14px',
+              borderRadius: '999px',
+              background: '#4f46e5',
+              color: '#fff',
+              fontSize: '0.82rem',
+              fontWeight: 800,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
+              border: '2px solid transparent',
+              cursor: 'pointer',
+              transition: 'all 0.2s',
+              boxShadow: '0 2px 8px rgba(79, 70, 229, 0.3)'
+            }}
+          >
+            ⚙️ Admin Portal
+          </button>
+        </div>
       </header>
 
       <div className="tv-home-body">
@@ -177,7 +196,7 @@ function CategoryPage({ categoryId, highlightId, onBack, onPlayGame }) {
     const w = window.innerWidth;
     if (w > 1024) return 4;
     if (w > 768) return 3;
-    if (w > 480) return 2;
+    if (w > 600) return 2;
     return 1;
   };
 
@@ -353,7 +372,7 @@ function GamePage({ gameId, onBack }) {
             Loading Game...
           </div>
         }>
-          <GameComponent />
+          <GameComponent gameId={gameId} />
         </React.Suspense>
       </div>
 
@@ -405,6 +424,8 @@ export default function App() {
         setPage('game');
         setCurrentGame(parts[1]);
         if (parts[2]) setCurrentCat(parts[2]); // Remember the category we came from
+      } else if (hash === 'admin') {
+        setPage('admin');
       }
     };
 
@@ -433,6 +454,10 @@ export default function App() {
     window.location.hash = `game/${gameId}/${currentCat}`;
   };
 
+  const goAdmin = () => {
+    window.location.hash = 'admin';
+  };
+
   const handleBackNavigation = () => {
     // Calling this triggers the browser's physical back behavior, 
     // which automatically updates our hash and triggers 'hashchange'!
@@ -441,9 +466,18 @@ export default function App() {
 
   return (
     <>
-      {page === 'home'     && <HomePage     onSelectCategory={goCat} />}
+      {page === 'home'     && <HomePage     onSelectCategory={goCat} onSelectAdmin={goAdmin} />}
       {page === 'category' && <CategoryPage categoryId={currentCat} highlightId={highlightId} onBack={handleBackNavigation} onPlayGame={goGame} />}
       {page === 'game'     && <GamePage     gameId={currentGame} onBack={handleBackNavigation} />}
+      {page === 'admin'    && (
+        <React.Suspense fallback={
+          <div style={{ display: 'flex', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center', background: '#f8fafc', color: '#0f172a', fontSize: '1.5rem', fontFamily: "'Fredoka One', cursive" }}>
+            Loading Admin Portal...
+          </div>
+        }>
+          <AdminPortal onBack={handleBackNavigation} />
+        </React.Suspense>
+      )}
     </>
   );
 }

@@ -140,15 +140,18 @@ const TOPICS = {
 
 /* Per-topic queues — no repeat until all questions in a topic are shown */
 
+export const config = {
+  videoSrc: VIDEO_SRC,
+  topics: TOPICS,
+  theme: C,
+  title: "🌋 ప్రకృతి వైపరీత్యాలు — Natural Disasters",
+  loadingIcon: "🌋",
+  loadingText: "Preparing your natural disaster safety questions…",
+  numQuestions: 5
+};
+
 export default function NaturalDisastersQuiz() {
   return (
-    <VideoQuizTemplate
-      videoSrc={VIDEO_SRC}
-      topics={TOPICS}
-      theme={C}
-      title="🌋 ప్రకృతి వైపరీత్యాలు — Natural Disasters"
-      loadingIcon="🌋"
-      loadingText="Preparing your natural disaster safety questions…"
-    />
+    <VideoQuizTemplate {...config} />
   );
 }
